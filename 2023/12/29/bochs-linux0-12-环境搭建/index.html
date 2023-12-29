@@ -16,22 +16,28 @@
   <meta name="author" content="joelee">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Hello World!">
+    <meta name="description" content="折腾了一个上午，终于搭建好 bochs 安装和 linux0.12 环境搭建，所以想记录一下，避免以后忘记。  环境 操作系统：Ubuntu 22.04 LST bochs 版本：2.7 测试的linux版本：0.12（软盘启动） 参考书籍：《linux0.12完全注释》，赵炯 流程 安装 bochs 123sudo apt install bochs bochs-x# bochs 是 IA-32">
 <meta property="og:type" content="article">
-<meta property="og:title" content="helloworld">
-<meta property="og:url" content="https://joelee-hit.gitee.io/2023/12/28/helloworld/index.html">
+<meta property="og:title" content="bochs-linux0-12-环境搭建">
+<meta property="og:url" content="https://joelee-hit.gitee.io/2023/12/29/bochs-linux0-12-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/index.html">
 <meta property="og:site_name" content="joelee&#39;s blog">
-<meta property="og:description" content="Hello World!">
+<meta property="og:description" content="折腾了一个上午，终于搭建好 bochs 安装和 linux0.12 环境搭建，所以想记录一下，避免以后忘记。  环境 操作系统：Ubuntu 22.04 LST bochs 版本：2.7 测试的linux版本：0.12（软盘启动） 参考书籍：《linux0.12完全注释》，赵炯 流程 安装 bochs 123sudo apt install bochs bochs-x# bochs 是 IA-32">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-12-28T03:25:50.000Z">
-<meta property="article:modified_time" content="2023-12-28T03:28:33.675Z">
+<meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2023/12/29/bochs-linux0-12-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20231229162258808.png">
+<meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2023/12/29/bochs-linux0-12-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20231229162314479.png">
+<meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2023/12/29/bochs-linux0-12-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20231229162329510.png">
+<meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2023/12/29/bochs-linux0-12-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20231229162342379.png">
+<meta property="article:published_time" content="2023-12-29T08:15:16.000Z">
+<meta property="article:modified_time" content="2023-12-29T08:23:44.088Z">
 <meta property="article:author" content="joelee">
-<meta property="article:tag" content="helloworld">
+<meta property="article:tag" content="bochs">
+<meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://joelee-hit.gitee.io/myblog/2023/12/29/bochs-linux0-12-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20231229162258808.png">
   
   
   
-  <title>helloworld - joelee&#39;s blog</title>
+  <title>bochs-linux0-12-环境搭建 - joelee&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +203,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="helloworld"></span>
+            <span id="subtitle" data-typed-text="bochs-linux0-12-环境搭建"></span>
           
         </div>
 
@@ -213,8 +219,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-12-28 11:25" pubdate>
-          2023年12月28日 上午
+        <time datetime="2023-12-29 16:15" pubdate>
+          2023年12月29日 下午
         </time>
       </span>
     
@@ -225,7 +231,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          11 字
+          1.6k 字
         
       </span>
     
@@ -236,7 +242,7 @@
         
         
         
-          1 分钟
+          14 分钟
         
       </span>
     
@@ -273,12 +279,63 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">helloworld</h1>
+            <h1 id="seo-header">bochs-linux0-12-环境搭建</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Hello World!</p>
+                <p>折腾了一个上午，终于搭建好 bochs 安装和 linux0.12
+环境搭建，所以想记录一下，避免以后忘记。</p>
+<hr />
+<h1 id="环境">环境</h1>
+<p>操作系统：Ubuntu 22.04 LST</p>
+<p>bochs 版本：2.7</p>
+<p>测试的linux版本：0.12（软盘启动）</p>
+<p>参考书籍：《linux0.12完全注释》，赵炯</p>
+<h1 id="流程">流程</h1>
+<h2 id="安装-bochs">安装 bochs</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt install bochs bochs-x<br><span class="hljs-comment"># bochs 是 IA-32 PC emulator</span><br><span class="hljs-comment"># bochs-x 是 X11 plugin for Bochs, 因为 bochs 需要运行在 X11 桌面协议下</span><br></code></pre></td></tr></table></figure>
+<h2 id="下载-linux-0.12系统软件包">下载 linux-0.12系统软件包</h2>
+<p>赵炯老师书里给的链接是
+http://oldlinux.org/Linux.old/bochs/linux-0.12-080324.zip 。</p>
+<p>下载并解压后文件夹结构如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-string">linux-0.12-080324</span><br><span class="hljs-string">├──</span> <span class="hljs-string">Bochs-2.3.6.exe</span><br><span class="hljs-string">├──</span> <span class="hljs-string">SYSTEM.MAP</span><br><span class="hljs-string">├──</span> <span class="hljs-string">bochs-2.3.6-1.i586.rpm</span><br><span class="hljs-string">├──</span> <span class="hljs-string">bochsout.txt</span><br><span class="hljs-string">├──</span> <span class="hljs-string">bochsrc-0.12-fd.bxrc</span><br><span class="hljs-string">├──</span> <span class="hljs-string">bochsrc-0.12-hd.bxrc</span><br><span class="hljs-string">├──</span> <span class="hljs-string">bochsrc-sample.txt</span><br><span class="hljs-string">├──</span> <span class="hljs-string">bootimage-0.12-fd</span><br><span class="hljs-string">├──</span> <span class="hljs-string">bootimage-0.12-hd</span><br><span class="hljs-string">├──</span> <span class="hljs-string">debug.bat</span><br><span class="hljs-string">├──</span> <span class="hljs-string">diska.img</span><br><span class="hljs-string">├──</span> <span class="hljs-string">diskb.img</span><br><span class="hljs-string">├──</span> <span class="hljs-string">linux-0.12-README</span><br><span class="hljs-string">├──</span> <span class="hljs-string">rootimage-0.12-fd</span><br><span class="hljs-string">└──</span> <span class="hljs-string">rootimage-0.12-hd</span><br></code></pre></td></tr></table></figure>
+<p>我这里需要用到的是</p>
+<ul>
+<li>bochsrc-0.12-fd.bxrc ，软盘启动的配置文件</li>
+<li>bootimage-0.12-fd ，启动映像</li>
+<li>rootimage-0.12-fd ，根文件映像</li>
+<li>bochsout.txt ，debug的输出文件</li>
+</ul>
+<h2 id="运行-linux0.12">运行 linux0.12</h2>
+<p>运行命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">bochs -f bochsrc-0.12-fd.bxrc<br></code></pre></td></tr></table></figure>
+<p>实际情况下，当运行这句命令后，会出现若干问题，我这里展示我所所遇到的。</p>
+<h3 id="常见问题">常见问题</h3>
+<p>（1）<strong>directive 'vga_update_interval' not
+understood</strong>：
+原因：Bochs版本过新，不兼容一些旧选项，将.bxrc中的vga_update_interval删除掉</p>
+<p>（2）<strong>Bochs黑屏</strong>： 在终端输入c</p>
+<img src="/myblog/2023/12/29/bochs-linux0-12-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20231229162258808.png" srcset="/myblog/img/loading.gif" lazyload class="" title="image-20231229162258808">
+<p>（3）<strong>bx_dbg_read_linear: physical memory read
+error</strong>： a) 将bochsrc文件中第10行vgaromimage:
+/usr/share/vgabios/vgabios.bin改为 vgaromimage:
+file=/usr/share/vgabios/vgabios.bin 或 vgaromimage:
+file=/usr/share/bochs/VGABIOS-lgpl-latest b) 从
+https://github.com/bochs-emu/Bochs/raw/REL_2_7_FINAL/bochs/bios/BIOS-bochs-latest
+下载该文件，修改 romimage: file=该文件路径，或者将位于
+<code>/usr/share/bochs/</code> 下的 <code>BIOS-bochs-latest</code>
+替换成 该文件。</p>
+<p>（4）<strong>看到insert root floppy and press ENTER</strong>：
+解决：https://www.cnblogs.com/raina/p/13212177.html 点击右上角的config,
+会出现"Bochs Runtime Options"； 然后更改floppy disk
+0的名字为同目录下的rootimage-0.12-fd，不断继续回车，这时软件会自动识别；
+重新出现"Bochs Runtime Options"后选择"Continue simulation"</p>
+<img src="/myblog/2023/12/29/bochs-linux0-12-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20231229162314479.png" srcset="/myblog/img/loading.gif" lazyload class="" title="image-20231229162314479">
+<img src="/myblog/2023/12/29/bochs-linux0-12-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20231229162329510.png" srcset="/myblog/img/loading.gif" lazyload class="" title="image-20231229162329510">
+<img src="/myblog/2023/12/29/bochs-linux0-12-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20231229162342379.png" srcset="/myblog/img/loading.gif" lazyload class="" title="image-20231229162342379">
+<p>（5）<strong>timeout! no client present</strong>：
+安装bochs-x，命令为 sudo apt install bochs-x</p>
 
                 
               </div>
@@ -297,8 +354,15 @@
     
       <span class="category-chain">
         
-  <a href="/myblog/categories/helloworld/" class="category-chain-item">helloworld</a>
+  <a href="/myblog/categories/linux/" class="category-chain-item">linux</a>
   
+  
+    <span>></span>
+    
+  <a href="/myblog/categories/linux/bochs%E6%90%AD%E5%BB%BAlinux0-12%E7%8E%AF%E5%A2%83/" class="category-chain-item">bochs搭建linux0.12环境</a>
+  
+  
+
   
 
       </span>
@@ -312,7 +376,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/myblog/tags/helloworld/" class="print-no-link">#helloworld</a>
+        <a href="/myblog/tags/bochs/" class="print-no-link">#bochs</a>
+      
+        <a href="/myblog/tags/linux/" class="print-no-link">#linux</a>
       
     </div>
   
@@ -324,8 +390,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>helloworld</div>
-      <div>https://joelee-hit.gitee.io/2023/12/28/helloworld/</div>
+      <div>bochs-linux0-12-环境搭建</div>
+      <div>https://joelee-hit.gitee.io/2023/12/29/bochs-linux0-12-环境搭建/</div>
     </div>
     <div class="license-meta">
       
@@ -337,7 +403,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年12月28日</div>
+          <div>2023年12月29日</div>
         </div>
       
       
@@ -369,18 +435,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/myblog/2023/12/29/bochs-linux0-12-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" title="bochs-linux0-12-环境搭建">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">bochs-linux0-12-环境搭建</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/myblog/2023/10/19/Centos7-%E5%AE%89%E8%A3%85PyTorch%E5%92%8CGPU%E7%8E%AF%E5%A2%83%E6%94%AF%E6%8C%81/" title="Centos7 安装PyTorch和GPU环境支持">
-                        <span class="hidden-mobile">Centos7 安装PyTorch和GPU环境支持</span>
+                      <a href="/myblog/2023/12/28/helloworld/" title="helloworld">
+                        <span class="hidden-mobile">helloworld</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
