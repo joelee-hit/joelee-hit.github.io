@@ -28,7 +28,7 @@
 <meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2023/12/29/bochs-linux0-12-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20231229162329510.png">
 <meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2023/12/29/bochs-linux0-12-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20231229162342379.png">
 <meta property="article:published_time" content="2023-12-29T08:15:16.000Z">
-<meta property="article:modified_time" content="2023-12-29T08:23:44.088Z">
+<meta property="article:modified_time" content="2023-12-29T08:36:33.044Z">
 <meta property="article:author" content="joelee">
 <meta property="article:tag" content="bochs">
 <meta property="article:tag" content="linux">
@@ -318,24 +318,29 @@ understood</strong>：
 <p>（2）<strong>Bochs黑屏</strong>： 在终端输入c</p>
 <img src="/myblog/2023/12/29/bochs-linux0-12-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20231229162258808.png" srcset="/myblog/img/loading.gif" lazyload class="" title="image-20231229162258808">
 <p>（3）<strong>bx_dbg_read_linear: physical memory read
-error</strong>： a) 将bochsrc文件中第10行vgaromimage:
+error</strong>：</p>
+<ol type="a">
+<li><p>将bochsrc文件中第10行vgaromimage:
 /usr/share/vgabios/vgabios.bin改为 vgaromimage:
 file=/usr/share/vgabios/vgabios.bin 或 vgaromimage:
-file=/usr/share/bochs/VGABIOS-lgpl-latest b) 从
+file=/usr/share/bochs/VGABIOS-lgpl-latest</p></li>
+<li><p>从
 https://github.com/bochs-emu/Bochs/raw/REL_2_7_FINAL/bochs/bios/BIOS-bochs-latest
 下载该文件，修改 romimage: file=该文件路径，或者将位于
 <code>/usr/share/bochs/</code> 下的 <code>BIOS-bochs-latest</code>
-替换成 该文件。</p>
-<p>（4）<strong>看到insert root floppy and press ENTER</strong>：
-解决：https://www.cnblogs.com/raina/p/13212177.html 点击右上角的config,
-会出现"Bochs Runtime Options"； 然后更改floppy disk
-0的名字为同目录下的rootimage-0.12-fd，不断继续回车，这时软件会自动识别；
-重新出现"Bochs Runtime Options"后选择"Continue simulation"</p>
+替换成 该文件。</p></li>
+</ol>
+<p>（4）<strong>看到insert root floppy and press ENTER</strong>：</p>
+<p>解决：https://www.cnblogs.com/raina/p/13212177.html</p>
+<p>点击右上角的config, 会出现"Bochs Runtime Options"；</p>
 <img src="/myblog/2023/12/29/bochs-linux0-12-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20231229162314479.png" srcset="/myblog/img/loading.gif" lazyload class="" title="image-20231229162314479">
+<p>然后更改floppy disk
+0的名字为同目录下的rootimage-0.12-fd，不断继续回车，这时软件会自动识别；</p>
 <img src="/myblog/2023/12/29/bochs-linux0-12-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20231229162329510.png" srcset="/myblog/img/loading.gif" lazyload class="" title="image-20231229162329510">
+<p>重新出现"Bochs Runtime Options"后选择"Continue simulation"</p>
 <img src="/myblog/2023/12/29/bochs-linux0-12-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20231229162342379.png" srcset="/myblog/img/loading.gif" lazyload class="" title="image-20231229162342379">
-<p>（5）<strong>timeout! no client present</strong>：
-安装bochs-x，命令为 sudo apt install bochs-x</p>
+<p>（5）<strong>timeout! no client present</strong>：</p>
+<p>安装bochs-x，命令为 sudo apt install bochs-x</p>
 
                 
               </div>
