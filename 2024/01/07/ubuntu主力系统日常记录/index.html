@@ -25,6 +25,8 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/re-linuxcore-1.png">
 <meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/sw-ve-kdenlive.jpg">
+<meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/sw-zotero-pdftk.png">
+<meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/sw-zotero-darkthemebug.png">
 <meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/op-screen-1.png">
 <meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/op-screen-2.png">
 <meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/op-output-to-pdf.png">
@@ -32,7 +34,7 @@
 <meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/bug-fcitx.png">
 <meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/bug-internal-error.png">
 <meta property="article:published_time" content="2024-01-06T16:10:30.000Z">
-<meta property="article:modified_time" content="2024-01-06T18:21:27.259Z">
+<meta property="article:modified_time" content="2024-01-07T06:56:41.905Z">
 <meta property="article:author" content="joelee">
 <meta property="article:tag" content="ubuntu">
 <meta property="article:tag" content="主力系统">
@@ -235,7 +237,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          10k 字
+          16k 字
         
       </span>
     
@@ -246,7 +248,7 @@
         
         
         
-          88 分钟
+          137 分钟
         
       </span>
     
@@ -378,7 +380,167 @@ ign</h3>
 target="_blank" rel="noopener" href="https://kdenlive.org/en/download/">kdenlive</a></p>
 <img src="/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/sw-ve-kdenlive.jpg" srcset="/myblog/img/loading.gif" lazyload class="" title="undefined">
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 占用 578 MB 空间</span><br>sudo add-apt-repository ppa:kdenlive/kdenlive-stable<br>sudo apt-fast update<br>sudo apt-fast install kdenlive<br></code></pre></td></tr></table></figure>
+<h2 id="社交">社交</h2>
+<h3 id="微信">微信</h3>
+<p>微信已经出了 linux 版，截止23年1月的最新版本是
+2.1.9，推荐使用<code>星火应用商店</code>。</p>
+<blockquote>
+<p>星火应用商店（GUI）：https://spark-app.store/download</p>
+<p>星火应用商店（Console）：https://gitee.com/spark-store-project/spark-store</p>
+</blockquote>
+<p>在应用终端依次执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ spark-store-console<br><span class="hljs-comment"># 选择&#x27;社交沟通&#x27;, 再选择&#x27;微信Linux&#x27;, </span><br>标题：微信Linux<br>版本：2.1.9<br>包名：store.spark-app.wechat-linux-spark<br>作者：懵仙兔兔 &lt;acgm@qq.com&gt;<br>投稿者:shenmo &lt;jifengshenmo@outlook.com&gt;<br>官网：https://wx.qq.com/<br>大小：87.78 MB<br>更新时间：2023-11-17 20:17:51<br>介绍：<br>微信 <span class="hljs-keyword">for</span> Linux<br>支持了语音通话<br><br><span class="hljs-comment"># 选择&#x27;install&#x27;</span><br></code></pre></td></tr></table></figure>
+<h3 id="yesplaymusic">YesPlayMusic</h3>
+<p>https://github.com/qier222/YesPlayMusic</p>
+<h2 id="工具">工具</h2>
+<h3 id="obs">OBS</h3>
+<p>官网：https://obsproject.com/</p>
+<p>安装步骤：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo add-apt-repository ppa:obsproject/obs-studio<br>sudo apt update<br>sudo apt install ffmpeg obs-studio <span class="hljs-comment"># obs-studio:351MB</span><br>sudo apt autoremove --purge ffmpeg obs-studio <span class="hljs-comment"># 427MB</span><br></code></pre></td></tr></table></figure>
+<h3 id="todesk">Todesk</h3>
+<p><a target="_blank" rel="noopener" href="https://www.todesk.com/download.html">ToDesk官网</a>
+：log日志目录有<code>~/.local/share/todesk/Logs</code>、<code>/var/log/todesk</code>。</p>
+<h3 id="easyconnect-hit-version">EasyConnect (HIT version)</h3>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://static.hit.edu.cn/vpn/#">哈工大版本</a></p>
+<p><a
+target="_blank" rel="noopener" href="http://download.sangfor.com.cn/download/product/sslvpn/pkg/linux_767/EasyConnect_x64_7_6_7_3.deb">通用版本</a>：在<a
+target="_blank" rel="noopener" href="https://vpn2.shu.edu.cn/portal/#!/login">Easy
+Connect官网</a>上下载<a
+target="_blank" rel="noopener" href="http://download.sangfor.com.cn/download/product/sslvpn/pkg/linux_767/EasyConnect_x64_7_6_7_3.deb">EasyConnect_x64
+For Ubuntu</a>版本</p>
+<p>注意：无法跳转下载时请按F12打开浏览器控制台，点击<code>NetWork</code>Tab，查看刚刚发送的请求，可以看到<code>Request URL</code>就是该文件的直链，复制到浏览器下载即可。</p>
+</blockquote>
+<p>安装：<code>sudo apt install ./EasyConnect_x64_7_6_7_3.deb</code></p>
+<h4 id="点击图标无法打开">点击图标无法打开</h4>
+<p>系统日志：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo dmesg<br><span class="hljs-comment"># [28131.184455] process &#x27;share/sangfor/EasyConnect/EasyConnect&#x27; started with executable stack</span><br><span class="hljs-comment"># [28131.451640] show_signal: 14 callbacks suppressed</span><br><span class="hljs-comment"># [28131.451643] traps: EasyConnect[56116] general protection fault ip:7f41a1f57b09 sp:7ffc022a2370 error:0 in libharfbuzz.so.0.20704.0[7f41a1f3a000+91000]</span><br><span class="hljs-comment"># [28139.682435] traps: EasyConnect[56154] general protection fault ip:7f4c2b957b09 sp:7fffcdcfd5f0 error:0 in libharfbuzz.so.0.20704.0[7f4c2b93a000+91000]</span><br><span class="hljs-comment"># [28380.020273] traps: EasyConnect[56966] general protection fault ip:7f9d83670b09 sp:7fffa54691e0 error:0 in libharfbuzz.so.0.20704.0[7f9d83653000+91000]</span><br></code></pre></td></tr></table></figure>
+<p>查阅<a
+target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/648655420">资料</a>发现原因就是
+libpango 这个包在 Ubuntu 22.04
+系统里的版本太高了，需要进行降版本处理。为了防止修改系统库带来的风险，直接将相关的
+.so 库文件解压到 easyconnect 同目录下即可，即
+<code>/usr/share/sangfor/EasyConnect/</code> 下。</p>
+<blockquote>
+<p><a
+target="_blank" rel="noopener" href="http://kr.archive.ubuntu.com/ubuntu/pool/main/p/pango1.0/">低版本
+libpango地址</a> ，在该地址里找到以下三个文件：</p>
+<p><a
+target="_blank" rel="noopener" href="http://kr.archive.ubuntu.com/ubuntu/pool/main/p/pango1.0/libpangocairo-1.0-0_1.40.14-1_amd64.deb">libpangocairo-1.0-0_1.40.14-1_amd64.deb</a></p>
+<p><a
+target="_blank" rel="noopener" href="http://kr.archive.ubuntu.com/ubuntu/pool/main/p/pango1.0/libpangoft2-1.0-0_1.40.14-1_amd64.deb">libpangoft2-1.0-0_1.40.14-1_amd64.deb</a></p>
+<p><a
+target="_blank" rel="noopener" href="http://kr.archive.ubuntu.com/ubuntu/pool/main/p/pango1.0/libpango-1.0-0_1.40.14-1_amd64.deb">libpango-1.0-0_1.40.14-1_amd64.deb</a></p>
+<p>解压下载下来的三个 deb 包，并获取每个 deb 包中
+<code>xxx.deb/data.tar.xz/usr/lib/x86_64-linux-gnu</code>
+下的所有内容，集合在一起如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">libpango-1.0.so.0  <br>libpango-1.0.so.0.4000.14  <br>libpangocairo-1.0.so.0  <br>libpangocairo-1.0.so.0.4000.14  <br>libpangoft2-1.0.so.0  <br>libpangoft2-1.0.so.0.4000.14<br></code></pre></td></tr></table></figure>
+<p>拷贝到 <code>/usr/share/sangfor/EasyConnect/</code>
+，命令行或者点击图标打开EasyConnect。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">/usr/share/sangfor/EasyConnect/EasyConnect --enable-transparent-visuals --disable-gpu<br></code></pre></td></tr></table></figure>
+<p>连接成功后，在右上角可以看到图标（不显示灰色）。</p>
+</blockquote>
+<h4 id="hit-vpn服务器地址">HIT vpn服务器地址</h4>
+<p>https://vpn.hitsz.edu.cn 或 https://ivpn.hit.edu.cn</p>
+<h3 id="vlc-player">VLC Player</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt install vlc<br></code></pre></td></tr></table></figure>
+<h2 id="文字工作">文字工作</h2>
+<h3 id="wps">WPS</h3>
+<p>WPS的字体文件存储在 <code>/usr/share/fonts/wps-office</code>
+。WPS初次打开时缺失和需要的（中文）字体文件有：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">DejaVuMathTeXGyre.ttf  msyh.ttc    mtextra.ttf  simkai.ttf  wingding.ttf<br>WINGDNG2.ttf           msyhbd.ttc  simfang.ttf  simsun.ttc<br>WINGDNG3.ttf           msyhl.ttc   simhei.ttf   symbol.ttf<br></code></pre></td></tr></table></figure>
+<p>准备好以上文件，将它们复制到 <code>/usr/share/fonts/wps-office</code>
+目录下，然后在 <code>/usr/share/fonts</code> 目录下执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo mkfontscale<br>sudo mkfontdir<br>sudo fc-cache<br></code></pre></td></tr></table></figure>
+<p>再重启WPS，并设置为中文语言，即可以看到字体选项出现了
+<code>宋体</code> 等中文字体。</p>
+<blockquote>
+<p><a
+target="_blank" rel="noopener" href="https://blog.csdn.net/qq_38863413/article/details/105484539">如何获取中文字体文件？</a></p>
+<p><a
+target="_blank" rel="noopener" href="https://pan.baidu.com/s/14dfzUrKzW_OJO4daErCLPQ">缺失字体文件</a>
+提取码: 8888</p>
+</blockquote>
+<h3 id="pdf-studio-12">PDF Studio 12</h3>
+<p><a target="_blank" rel="noopener" href="https://rutracker.net/forum/viewtopic.php?t=5332940">crack
+version</a> ，使用过程中若出现需要激活的弹窗，则删掉
+<code>~/.pdfstudio12</code> 再重新打开pdfstudio即可。</p>
+<h3 id="zotero">Zotero</h3>
+<p><a target="_blank" rel="noopener" href="https://www.zotero.org/">Zotero 官网</a></p>
+<h4 id="安装">安装</h4>
+<p>Download the tarball, extract the contents, and run
+<code>zotero</code> from that directory to start Zotero.</p>
+<p>For Ubuntu, the tarball includes a .desktop file that can be used to
+add Zotero to the launcher:</p>
+<ol type="1">
+<li>Move the extracted directory to a location of your choice (e.g.,
+<code>/opt/zotero</code>).</li>
+<li>Run the <code>set_launcher_icon</code> script from a terminal to
+update the .desktop file for that location. .desktop files require
+absolute paths for icons, so <code>set_launcher_icon</code> replaces the
+icon path with the current location of the icon based on where you've
+placed the directory.</li>
+<li>Symlink <code>zotero.desktop</code> into
+<code>~/.local/share/applications/</code> (e.g.,
+<code>ln -s /opt/zotero/zotero.desktop ~/.local/share/applications/zotero.desktop</code>)</li>
+</ol>
+<p>Zotero should then appear either in your launcher or in the
+applications list when you click the grid icon (“Show Applications”),
+from which you can drag it to the launcher.</p>
+<blockquote>
+<p>安装完后记得进入 Zotero，自定义其数据存放的地址。</p>
+</blockquote>
+<h4 id="推荐的插件">推荐的插件</h4>
+<p><a
+target="_blank" rel="noopener" href="https://www.cnblogs.com/BoyaYan/p/17310302.html">参考文章</a></p>
+<p>问题：Jasminum 插件需要 pdftk 才能显示 PDF 的书签，但是 pdftk
+好像没有 linux 的二进制版本，因此需要自行编译。</p>
+<blockquote>
+<p><a
+target="_blank" rel="noopener" href="https://packages.ubuntu.com/source/jammy/pdftk-java">pdftk-java需要的依赖</a>：<a
+target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu/pool/universe/a/ant/">ant</a>
+<a
+target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu/pool/universe/b/bouncycastle/">libbcprov</a>
+<a
+target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu/pool/universe/a/apache-pom/">apache-pom</a>
+<a
+target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu/pool/universe/c/commons-parent/">commons-parent</a>
+<a
+target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu/pool/universe/libc/libcommons-lang3-java/">libcommons-lang3-java</a></p>
+<p><strong>编译</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ <span class="hljs-built_in">ls</span> /usr/share/java/<br>ant-1.10.13.jar    ant-launcher-1.10.13.jar  bcprov.jar                java-atk-wrapper.jar  libintl.jar<br>ant-bootstrap.jar  ant-launcher.jar          commons-lang3-3.12.0.jar  java_defaults.mk<br>ant.jar            bcprov-1.72.jar           commons-lang3.jar         libintl-0.21.jar<br><br>$ git <span class="hljs-built_in">clone</span> https://gitlab.com/pdftk-java/pdftk.git<br>$ <span class="hljs-built_in">cd</span> pdftk<br>$ <span class="hljs-built_in">mkdir</span> lib<br>$ <span class="hljs-built_in">ln</span> -st lib /usr/share/java/&#123;commons-lang3,bcprov&#125;.jar<br>$ ant jar<br><span class="hljs-comment"># 运行jar包</span><br>$ java -jar build/jar/pdftk.jar --<span class="hljs-built_in">help</span><br><br><span class="hljs-comment"># 接下来我们尝试将jar包转换为可执行文件</span><br><span class="hljs-comment"># 参考: https://stackoverflow.com/questions/44427355/how-to-convert-jar-to-linux-executable-file</span><br>$ <span class="hljs-built_in">cd</span> build/jar<br>$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;#!/usr/bin/java -jar&#x27;</span> &gt; pdftk<br>$ <span class="hljs-built_in">cat</span> pdftk.jar &gt;&gt; pdftk<br>$ <span class="hljs-built_in">chmod</span> +x pdftk<br>$ ./pdftk<br></code></pre></td></tr></table></figure>
+<p><strong>编译完后可以卸载</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt autoremove --purge libcommons-lang3-java ant libbcprov-java<br>sudo apt autoremove --purge libcommons-parent-java libapache-pom-java<br></code></pre></td></tr></table></figure>
+<img src="/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/sw-zotero-pdftk.png" srcset="/myblog/img/loading.gif" lazyload class="" title="image-20240107144840105">
+</blockquote>
+<h4 id="卸载">卸载</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">rm</span> -rf ~/.local/share/applications/zotero.desktop<br>sudo <span class="hljs-built_in">rm</span> -rf /opt/zotero<br><span class="hljs-built_in">rm</span> -rf ~/Downloads/zotero/* <span class="hljs-comment"># 自己设置的数据文件夹</span><br></code></pre></td></tr></table></figure>
+<h4 id="dark主题不协调">dark主题不协调</h4>
+<p><a
+target="_blank" rel="noopener" href="https://blog.furffisite.link/p/linux-darkmode-zotero-gui-issue/">参考文章</a></p>
+<img src="/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/sw-zotero-darkthemebug.png" srcset="/myblog/img/loading.gif" lazyload class="" title="image-20240107145159756">
+<p>因为Linux端的Zotero（<a
+target="_blank" rel="noopener" href="https://aur.archlinux.org/packages/zotero-bin">AUR</a>）中有一部分元素的样式是由GTK控制的，因此当系统的GTK主题为深色主题时，Zotero的界面会呈现为这个样子。</p>
+<p>根据<a
+target="_blank" rel="noopener" href="https://forums.zotero.org/discussion/98693/theme-issue-some-parts-of-zoteros-gui-on-linux-are-controlled-by-gtk">这个帖子</a>，解决方案是通过环境变量在程序启动时指定其使用的GTK主题（<strong>明亮主题下效果最好</strong>），也就是：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ GTK_THEME=Pop-light zotero  <span class="hljs-comment"># Pop-light不可以变</span><br></code></pre></td></tr></table></figure>
+<p>反映到Desktop文件上，就是在启动指令（Exec项）前加入<code>env GTK_THEME=Pop-light</code>。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">[Desktop Entry]<br>Type=Application<br>Name=Zotero<br>Exec=<span class="hljs-built_in">env</span> GTK_THEME=Pop-light /usr/bin/zotero -url %U<br>...<br></code></pre></td></tr></table></figure>
+<p>查看系统当前主题：<code>gsettings get org.gnome.desktop.interface gtk-theme</code></p>
+<h2 id="应用商店">应用商店</h2>
+<h3 id="spark-store">spark-store</h3>
+<blockquote>
+<p>星火应用商店（GUI）：https://spark-app.store/download</p>
+<p>星火应用商店（Console）：https://gitee.com/spark-store-project/spark-store</p>
+</blockquote>
+<p><strong>卸载</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt autoremove spark-*<br><span class="hljs-comment"># &#x27;spark-dwine-helper-settings&#x27; &#x27;spark-wine7-devel&#x27; &#x27;spark-winehq8&#x27; &#x27;spark-store&#x27; &#x27;spark-wine8&#x27; &#x27;spark-dwine-helper&#x27; &#x27;spark-wine8-amd64&#x27; &#x27;spark-wine8-i386:i386&#x27;</span><br><span class="hljs-comment"># 0 to upgrade, 0 to newly install, 193 to remove and 0 not to upgrade.</span><br><span class="hljs-comment"># After this operation, 2,020 MB disk space will be freed.</span><br><br>sudo apt autopurge spark-*<br>sudo <span class="hljs-built_in">rm</span> -rf /opt/durapps/spark-store/bin/apt-fast-conf/sources.list.d/sparkstore.list<br></code></pre></td></tr></table></figure>
+<h3 id="卸载-wine">卸载 wine</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt autoremove wine<br>sudo apt purge wine<br><span class="hljs-built_in">rm</span> -r ~/.wine<br>sudo apt autoremove<br><span class="hljs-built_in">rm</span> -r ~/.local/share/applications/wine*<br><span class="hljs-built_in">rm</span> -r ~/.config/menus/applications-merged/wine*<br></code></pre></td></tr></table></figure>
 <h1 id="常用操作">常用操作</h1>
+<h2 id="使用x11协议的桌面">使用X11协议的桌面</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo nano /etc/gdm3/custom.conf<br><span class="hljs-comment"># 设置 WaylandEnable=false</span><br></code></pre></td></tr></table></figure>
+<p>或者在用户登录界面选择 X11 org 。</p>
 <h2 id="连接外接显示器">连接外接显示器</h2>
 <p>只有在连接外接显示器的时候，才能在 <code>settings-display</code>
 里找到相关设置和选项。</p>
@@ -524,6 +686,8 @@ E盘的设备名称是<code>/dev/nvm0n1p4</code>。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">7z x -mmt8 file.7z.001<br><span class="hljs-comment"># 自动检测并解压所有的.7z.00X文件，将它们组合成完整的压缩文件。</span><br><span class="hljs-comment"># -mmt8 使用8个线程</span><br></code></pre></td></tr></table></figure>
 <p>若想输出到指定目录：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">7z x -o/home/user/documents file.7z.001<br></code></pre></td></tr></table></figure>
+<h2 id="查看-gtk-的版本">查看 gtk 的版本</h2>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">gtk-launch --version<br></code></pre></td></tr></table></figure>
 <h1 id="常见bug">常见bug</h1>
 <h2 id="fcitx框架候选词不跟随">fcitx框架候选词不跟随</h2>
 <p>在使用Jet Brains系列产品时，使用 fcitx
