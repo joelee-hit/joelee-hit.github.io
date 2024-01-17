@@ -34,7 +34,7 @@
 <meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/bug-fcitx.png">
 <meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/bug-internal-error.png">
 <meta property="article:published_time" content="2024-01-06T16:10:30.000Z">
-<meta property="article:modified_time" content="2024-01-07T06:56:41.905Z">
+<meta property="article:modified_time" content="2024-01-17T20:41:32.399Z">
 <meta property="article:author" content="joelee">
 <meta property="article:tag" content="ubuntu">
 <meta property="article:tag" content="主力系统">
@@ -237,7 +237,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          16k 字
+          17k 字
         
       </span>
     
@@ -248,7 +248,7 @@
         
         
         
-          137 分钟
+          145 分钟
         
       </span>
     
@@ -286,6 +286,14 @@
         <div id="board">
           <article class="post-content mx-auto">
             <h1 id="seo-header">ubuntu主力系统日常记录</h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2024年1月18日 凌晨
+                  
+                
+              </p>
             
             
               <div class="markdown-body">
@@ -329,6 +337,9 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo update-grub　　<span class="hljs-comment"># 根据情况选择grub/grub2</span><br></code></pre></td></tr></table></figure>
 <p>禁止 apt 更新内核：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ sudo vi /etc/apt/apt.conf.d/10periodic<br><span class="hljs-comment"># 改成</span><br>APT::Periodic::Update-Package-Lists <span class="hljs-string">&quot;0&quot;</span>;<br>APT::Periodic::Download-Upgradeable-Packages <span class="hljs-string">&quot;0&quot;</span>;<br>APT::Periodic::AutocleanInterval <span class="hljs-string">&quot;0&quot;</span>;<br>APT::Periodic::Unattended-Upgrade <span class="hljs-string">&quot;0&quot;</span>;<br><br>$ sudo vi /etc/apt/apt.conf.d/20auto-upgrades<br><span class="hljs-comment"># 改成</span><br>APT::Periodic::Update-Package-Lists <span class="hljs-string">&quot;0&quot;</span>;<br>APT::Periodic::Download-Upgradeable-Packages <span class="hljs-string">&quot;0&quot;</span>;<br>APT::Periodic::AutocleanInterval <span class="hljs-string">&quot;0&quot;</span>;<br>APT::Periodic::Unattended-Upgrade <span class="hljs-string">&quot;0&quot;</span>;<br><br><br>$ sudo apt-mark hold linux-headers-6.2.0-39-generic linux-hwe-6.2-headers-6.2.0-39 linux-image-6.2.0-39-generic linux-modules-6.2.0-39-generic linux-modules-extra-6.2.0-39-generic<br></code></pre></td></tr></table></figure>
+<p>但是在后续实践中，发现 <code>apt-mark</code>
+禁止升级的内核相应包并没有如愿被禁止更新，应该还需加上</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt-mark hold linux-generic-hwe-22.04 linux-headers-generic-hwe-22.04 linux-image-generic-hwe-22.04<br></code></pre></td></tr></table></figure>
 <h2 id="优化">优化</h2>
 <h3 id="preload">preload</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt install preload<br></code></pre></td></tr></table></figure>
@@ -527,6 +538,33 @@ target="_blank" rel="noopener" href="https://forums.zotero.org/discussion/98693/
 <p>反映到Desktop文件上，就是在启动指令（Exec项）前加入<code>env GTK_THEME=Pop-light</code>。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">[Desktop Entry]<br>Type=Application<br>Name=Zotero<br>Exec=<span class="hljs-built_in">env</span> GTK_THEME=Pop-light /usr/bin/zotero -url %U<br>...<br></code></pre></td></tr></table></figure>
 <p>查看系统当前主题：<code>gsettings get org.gnome.desktop.interface gtk-theme</code></p>
+<h3 id="博客">博客</h3>
+<h4 id="hexo-常用命令">hexo 常用命令</h4>
+<p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/commands.html">官方文档</a></p>
+<p>在安装完 hexo
+搭建完个人博客之后，只需关注博客本地目录下的<code>source</code>文件夹，里面是博客所有文章的源代码，是博客的内容模板。<code>source</code>文件夹需要关注三个目录：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-string">_drafts</span>	<span class="hljs-comment"># 博客草稿，不作为发布的文章</span><br><span class="hljs-string">_posts</span>	<span class="hljs-comment"># 即将发布的博客</span><br><span class="hljs-string">about</span>	<span class="hljs-comment"># 个人页</span><br></code></pre></td></tr></table></figure>
+<p>（1）查看已有的文章：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo list &lt;<span class="hljs-built_in">type</span>&gt;<br><span class="hljs-comment"># type = &#123;page, post, route, tag, category&#125;</span><br><span class="hljs-comment"># post包括draft</span><br></code></pre></td></tr></table></figure>
+<p>（2）新建文章：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new [layout] &lt;title&gt;<br><span class="hljs-comment"># layout = &#123;post, draft, page(此不常用)&#125;</span><br><br><span class="hljs-comment"># 示例</span><br>hexo new post <span class="hljs-string">&quot;first article&quot;</span>  <span class="hljs-comment"># 等价于 hexo n &quot;first article&quot;</span><br></code></pre></td></tr></table></figure>
+<p>（3）删除文章：直接到 <code>source</code>
+文件夹目录里删除对应文件即可，再重新生成即可。</p>
+<p><a
+target="_blank" rel="noopener" href="https://www.yuezeyi.com/294.html">完全删除文章(包括已发布)</a></p>
+<p>（4）生成和本地预览博客：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo g &amp;&amp; hexo s  <span class="hljs-comment"># 完整命令是 hexo generate &amp;&amp; hexo server</span><br></code></pre></td></tr></table></figure>
+<p>若想生成文章时随时检测文章变动，可以使用 <code>hexo g -w</code> 或
+<code>hexo g --watch</code> 。</p>
+<p>若想本地预览时包括draft的文章，可以使用
+<code>hexo s --drafts</code></p>
+<p>（5）部署博客：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo d <span class="hljs-comment"># 完整命令: hexo deploy</span><br></code></pre></td></tr></table></figure>
+<p>（6）清除缓存文件 (<code>db.json</code>) 和已生成的静态文件
+(<code>public</code>)：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean<br></code></pre></td></tr></table></figure>
+<p>（7）修改主题配置文件，直接打开 <code>_config.yml</code>
+进行修改即可。</p>
 <h2 id="应用商店">应用商店</h2>
 <h3 id="spark-store">spark-store</h3>
 <blockquote>
@@ -620,9 +658,8 @@ E盘的设备名称是<code>/dev/nvm0n1p4</code>。</p>
 <h2 id="ffmpeg">ffmpeg</h2>
 <h3 id="转-.ts-为-.mp4">转 .ts 为 .mp4</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ffmpeg -i test.ts -acodec copy -vcodec copy -f mp4 test.mp4<br></code></pre></td></tr></table></figure>
-<h2 id="合并视频和音频">合并视频和音频</h2>
+<h3 id="合并视频和音频">合并视频和音频</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ffmpeg -i video.mp4 -i audio.mp3 -c:v copy -c:a aac -strict experimental output.mp4<br></code></pre></td></tr></table></figure>
-<p>命令参数简介：</p>
 <ul>
 <li>-i video.mp4：指定视频文件路径。</li>
 <li>-i audio.mp3：指定音频文件路径。</li>
@@ -630,6 +667,14 @@ E盘的设备名称是<code>/dev/nvm0n1p4</code>。</p>
 <li>-c:a aac：使用AAC编码音频流。</li>
 <li>-strict experimental：启用实验性AAC编码器。</li>
 <li>output.mp4：指定输出文件路径和名称。</li>
+</ul>
+<h3 id="转.mp4为.mp3">转.mp4为.mp3</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ffmpeg -i input.mp4 -vn -acodec libmp3lame -q:a 4 output.mp3<br></code></pre></td></tr></table></figure>
+<ul>
+<li><code>-i input.mp4</code>：指定输入文件名为<code>input.mp4</code>。</li>
+<li><code>-vn</code>：禁用视频流，只保留音频流。</li>
+<li><code>-acodec libmp3lame</code>：选择音频编解码器为LAME MP3。</li>
+<li><code>-q:a 4</code>：指定音频质量，取值范围为0（最好）到9（最差），4为默认值，表示较高的质量。</li>
 </ul>
 <h2 id="find命令">find命令</h2>
 <p>在Ubuntu中，<code>find</code>命令用于在文件系统中查找文件和目录。它的具体用法如下：</p>
@@ -773,6 +818,11 @@ send, 毕竟绝大多数情况程序崩溃不是经常能够遇到.</p>
           <div>2024年1月7日</div>
         </div>
       
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2024年1月18日</div>
+        </div>
       
       
         <div class="license-meta-item">
