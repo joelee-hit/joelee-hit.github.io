@@ -34,7 +34,7 @@
 <meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/bug-fcitx.png">
 <meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/bug-internal-error.png">
 <meta property="article:published_time" content="2024-01-06T16:10:30.000Z">
-<meta property="article:modified_time" content="2024-01-17T20:41:32.399Z">
+<meta property="article:modified_time" content="2024-03-08T09:25:05.067Z">
 <meta property="article:author" content="joelee">
 <meta property="article:tag" content="ubuntu">
 <meta property="article:tag" content="主力系统">
@@ -268,7 +268,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          17k 字
+          23k 字
         
       </span>
     
@@ -279,7 +279,7 @@
         
         
         
-          145 分钟
+          196 分钟
         
       </span>
     
@@ -329,7 +329,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年1月18日 凌晨
+                    本文最后更新于：2024年3月8日 下午
                   
                 
               </p>
@@ -424,6 +424,41 @@ ign</h3>
 <h3 id="安装-apt-fast">安装 apt-fast</h3>
 <p>转载自 https://www.sysgeek.cn/ubuntu-apt-fast/</p>
 <h1 id="常用软件">常用软件</h1>
+<h2 id="编程">编程</h2>
+<h3 id="codeblocks">codeblocks</h3>
+<p><a target="_blank" rel="noopener" href="https://www.codeblocks.org/">官网</a> Code::Blocks is a free
+C/C++ and Fortran IDE built to meet the most demanding needs of its
+users. It is designed to be very extensible and fully configurable.</p>
+<p>（1）<a
+target="_blank" rel="noopener" href="https://www.codeblocks.org/downloads/binaries/#imagesoslinux48pnglogo-linux-32-and-64-bit">下载linux64安装包
+.tar.xz</a></p>
+<p>（2）通过发行版的包管理器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt install codeblocks<br><span class="hljs-comment"># codeblocks codeblocks-common libastyle3 libcodeblocks0 libutempter0 xterm 23.8 MB</span><br>sudo apt install codeblocks-contrib<br><span class="hljs-comment"># codeblocks-contrib libwxsmithlib0 valgrind 100MB</span><br></code></pre></td></tr></table></figure>
+<h4 id="配置主题">配置主题</h4>
+<p>主题文件位于
+<code>/home/joelee/.config/codeblocks/default.conf</code> 。</p>
+<h3 id="rstudio">Rstudio</h3>
+<p><a target="_blank" rel="noopener" href="https://posit.co/download/rstudio-desktop/">官网</a> <a
+target="_blank" rel="noopener" href="https://cran.rstudio.com/">R官网</a> <a
+target="_blank" rel="noopener" href="https://computingforgeeks.com/how-to-install-r-and-rstudio-on-ubuntu-debian-mint">民间教程</a></p>
+<p>Rstudio是R语言的IDE，首先需要先安装R语言，</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt install r-base<br><span class="hljs-comment"># bzip2-doc gfortran gfortran-11 icu-devtools libblas-dev libbz2-dev libgfortran-11-dev libicu-dev libjpeg-dev libjpeg-turbo8-dev libjpeg8-dev liblapack-dev liblzma-dev libncurses-dev libncurses5-dev libpcre16-3 libpcre2-dev libpcre2-posix3 libpcre3-dev libpcre32-3 libpcrecpp0v5 libreadline-dev r-base r-base-core r-base-dev r-base-html r-cran-boot r-cran-class r-cran-cluster r-cran-codetools r-cran-foreign r-cran-kernsmooth r-cran-lattice r-cran-mass r-cran-matrix r-cran-mgcv r-cran-nlme r-cran-nnet r-cran-rpart r-cran-spatial r-cran-survival r-doc-html r-recommended</span><br></code></pre></td></tr></table></figure>
+<p>共需要安装43个包，总共194MB。</p>
+<p>安装Rstudio，</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget https://download1.rstudio.org/electron/jammy/amd64/rstudio-2023.12.1-402-amd64.deb<br>sudo apt install ./rstudio-2023.12.1-402-amd64.deb<br><span class="hljs-comment"># lib32gcc-s1 lib32stdc++6 libc6-i386 libclang-14-dev libclang-common-14-dev libclang-dev libclang1-14 libllvm14 libobjc-11-dev libssl-dev rstudio</span><br></code></pre></td></tr></table></figure>
+<p>共需要安装11个包，总共1176MB。</p>
+<blockquote>
+<p><a
+target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_39811386/article/details/116890479">参考</a>
+更改默认工作目录：Rstudio - Tool - Global Options - General
+，验证：<code>getwd()</code></p>
+<p>更改依赖包安装目录：<code>file.edit('~/.Rprofile')</code>，里面输入</p>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs tex">.libPaths(c(&quot;/home/joelee/App/Coder/R/Rpackages/4.1&quot;, &quot;/home/joelee/R/x86<span class="hljs-built_in">_</span>64-pc-linux-gnu-library/4.1&quot;))<br></code></pre></td></tr></table></figure>
+<p>验证：<code>./libPaths()</code></p>
+<p>更换源：Rstudio-Tools-Options-Packages-Choose Primary
+Repository，更换为清华源 ，</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">options(<span class="hljs-string">&quot;repos&quot;</span> = c(CRAN=<span class="hljs-string">&quot;https://mirrors.tuna.tsinghua.edu.cn/CRAN/&quot;</span>))<br>options()<span class="hljs-variable">$repos</span>  <span class="hljs-comment"># 查看使用install.packages安装时的默认镜像</span><br>options()<span class="hljs-variable">$BioC_mirror</span> <span class="hljs-comment"># 查看使用bioconductor的默认镜像</span><br>options(BioC_mirror=<span class="hljs-string">&quot;https://mirrors.ustc.edu.cn/bioc/&quot;</span>) <span class="hljs-comment"># 指定镜像，这个是中国科技大学镜像</span><br></code></pre></td></tr></table></figure>
+</blockquote>
 <h2 id="视频剪辑">视频剪辑</h2>
 <h3 id="kdenlive">kdenlive</h3>
 <p>免费且开源的视频编辑器，官网链接：<a
@@ -440,6 +475,13 @@ target="_blank" rel="noopener" href="https://kdenlive.org/en/download/">kdenlive
 </blockquote>
 <p>在应用终端依次执行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ spark-store-console<br><span class="hljs-comment"># 选择&#x27;社交沟通&#x27;, 再选择&#x27;微信Linux&#x27;, </span><br>标题：微信Linux<br>版本：2.1.9<br>包名：store.spark-app.wechat-linux-spark<br>作者：懵仙兔兔 &lt;acgm@qq.com&gt;<br>投稿者:shenmo &lt;jifengshenmo@outlook.com&gt;<br>官网：https://wx.qq.com/<br>大小：87.78 MB<br>更新时间：2023-11-17 20:17:51<br>介绍：<br>微信 <span class="hljs-keyword">for</span> Linux<br>支持了语音通话<br><br><span class="hljs-comment"># 选择&#x27;install&#x27;</span><br></code></pre></td></tr></table></figure>
+<h4 id="wechat-beta">wechat-beta</h4>
+<p><a target="_blank" rel="noopener" href="https://www.52pojie.cn/thread-1896902-1-1.html">1.0.0.150
+介绍链接</a> 数据存储目录是 <code>/home/joelee/.xwechat</code>
+。启动文件是 <code>/usr/share/applications/wechat.desktop</code>
+。程序文件位于 <code>/usr/bin/wechat</code> 。</p>
+<p>[无法卸载]: 编辑 <code>/var/lib/dpkg/info/wechat-beta.postrm</code>
+，在最后一行加上 <code>fi</code> 。</p>
 <h3 id="yesplaymusic">YesPlayMusic</h3>
 <p>https://github.com/qier222/YesPlayMusic</p>
 <h2 id="工具">工具</h2>
@@ -494,7 +536,59 @@ target="_blank" rel="noopener" href="http://kr.archive.ubuntu.com/ubuntu/pool/ma
 <p>https://vpn.hitsz.edu.cn 或 https://ivpn.hit.edu.cn</p>
 <h3 id="vlc-player">VLC Player</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt install vlc<br></code></pre></td></tr></table></figure>
+<h3 id="爱思助手管理ios">爱思助手(管理ios)</h3>
+<p><a target="_blank" rel="noopener" href="https://www.i4.cn/pro_pc.html">爱思助手官网</a></p>
+<p><a
+target="_blank" rel="noopener" href="https://d-updater.i4.cn/i4linux/deb/i4tools_v1.0.055.deb">i4tools_v1.0.055.deb</a></p>
+<p>缺失的库文件：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-string">libldap_r-2.4.so.2</span>  <span class="hljs-string">libldap_r-2.4.so.2.10.9</span><br><span class="hljs-string">liblber-2.4.so.2</span>    <span class="hljs-string">liblber-2.4.so.2.10.9</span><br><span class="hljs-string">libwebp.so.6</span>        <span class="hljs-string">libwebp.so.6.0.2</span><br><span class="hljs-string">libsasl2.so.3</span>       <span class="hljs-string">libsasl2.so.3.0.0</span><br></code></pre></td></tr></table></figure>
+<h3 id="peekgif">peek(gif)</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo add-apt-repository ppa:peek-developers/stable<br>sudo apt-fast update &amp;&amp; sudo apt-fast upgrade <br>sudo apt-fast install peek <br><span class="hljs-comment"># gstreamer1.0-plugins-ugly libkeybinder-3.0-0 libsidplay1v5 peek</span><br><span class="hljs-comment"># 2,194 kB</span><br></code></pre></td></tr></table></figure>
+<h3 id="便条-stckynotes">便条 stckynotes</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt-add-repository ppa:umang/indicator-stickynotes<br>sudo apt-get update &amp;&amp; sudo apt-get install indicator-stickynotes<br><span class="hljs-comment"># gir1.2-appindicator3-0.1 gir1.2-gtksource-3.0 indicator-stickynotes libgtksourceview-3.0-1 libgtksourceview-3.0-common</span><br><span class="hljs-comment"># 3,676 kB</span><br></code></pre></td></tr></table></figure>
+<ol type="1">
+<li>第一句实际进行的操作：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">Adding deb entry to /etc/apt/sources.list.d/umang-ubuntu-indicator-stickynotes-jammy.list<br>Adding disabled deb-src entry to /etc/apt/sources.list.d/umang-ubuntu-indicator-stickynotes-jammy.list<br>Adding key to /etc/apt/trusted.gpg.d/umang-ubuntu-indicator-stickynotes.gpg with fingerprint BFA3ED6C43427DA2DA04D7F4799A5FD5D1C5997F<br></code></pre></td></tr></table></figure>
+<p>如何撤销这些操作：</p>
+<ol type="1">
+<li><p>删除
+<code>/etc/apt/sources.list.d/umang-ubuntu-indicator-stickynotes-jammy.list</code>
+文件中添加的 deb 条目和 deb-src 条目。您可以使用文本编辑器（如 nano 或
+vim）来编辑这个文件，并删除相关行。</p></li>
+<li><p>删除
+<code>/etc/apt/trusted.gpg.d/umang-ubuntu-indicator-stickynotes.gpg</code>
+文件中添加的密钥。您可以使用以下命令来删除该密钥：</p></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">rm</span> /etc/apt/trusted.gpg.d/umang-ubuntu-indicator-stickynotes.gpg<br></code></pre></td></tr></table></figure>
+<ol start="2" type="1">
+<li>第二句的加速：将<code>/etc/apt/sources.list.d/umang-ubuntu-indicator-stickynotes-jammy.list</code>里对应的内容改成</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">deb https://launchpad.proxy.ustclug.org/umang/indicator-stickynotes/ubuntu/ jammy main<br></code></pre></td></tr></table></figure>
+<h3 id="ocrmypdf">ocrmypdf</h3>
+<p>https://github.com/ocrmypdf/OCRmyPDF</p>
+<p>使用指南：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash">ocrmypdf                      <span class="hljs-comment"># it&#x27;s a scriptable command line program</span><br>   -l eng+fra                 <span class="hljs-comment"># it supports multiple languages</span><br>   --rotate-pages             <span class="hljs-comment"># it can fix pages that are misrotated</span><br>   --deskew                   <span class="hljs-comment"># it can deskew crooked PDFs!</span><br>   --title <span class="hljs-string">&quot;My PDF&quot;</span>           <span class="hljs-comment"># it can change output metadata</span><br>   --<span class="hljs-built_in">jobs</span> 4                   <span class="hljs-comment"># it uses multiple cores by default</span><br>   --output-type pdfa         <span class="hljs-comment"># it produces PDF/A by default</span><br>   input_scanned.pdf          <span class="hljs-comment"># takes PDF input (or images)</span><br>   output_searchable.pdf      <span class="hljs-comment"># produces validated PDF output</span><br></code></pre></td></tr></table></figure>
+<p>查看 tesseract 能使用的语言包:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">ls</span> /usr/share/tesseract-ocr/5/tessdata -l -h<br></code></pre></td></tr></table></figure>
+<p>例子：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ocrmypdf -l chi_sim_v3+eng --rotate-pages --deskew --<span class="hljs-built_in">jobs</span> 4 --output-type pdfa 数据库系统概念.pdf 数据库系统概念_ocr.pdf<br></code></pre></td></tr></table></figure>
+<h4 id="tesseract-文字方向检测">tesseract 文字方向检测</h4>
+<p>https://github.com/tesseract-ocr/tessdata/raw/3.04.00/osd.traineddata</p>
+<h4 id="更准确的tesseract中文包">更准确的tesseract中文包</h4>
+<p>https://github.com/gumblex/tessdata_chi?tab=readme-ov-file</p>
 <h2 id="文字工作">文字工作</h2>
+<h3 id="libreoffice">libreoffice</h3>
+<p><a
+target="_blank" rel="noopener" href="https://zh-cn.libreoffice.org/download/libreoffice/">官网</a>
+有最新版和稳定版，我选择最新版 24.2.1
+，下载完压缩包后解压，进入子文件夹，里有 <code>DEBS</code> 和
+<code>readmes</code> 文件。进入 <code>DEBS</code> 文件夹，</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo dpkg -i *.deb<br></code></pre></td></tr></table></figure>
+<p>安装的包有：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 42个包</span><br>libobasis24.2-ooofonts libreoffice24.2-debian-menus libreoffice24.2-ure libobasis24.2-core libobasis24.2-draw libobasis24.2-en-us libobasis24.2-extension-beanshell-script-provider libobasis24.2-extension-javascript-script-provider libobasis24.2-extension-mediawiki-publisher libobasis24.2-extension-nlpsolver libobasis24.2-extension-pdf-import libobasis24.2-extension-report-builder libobasis24.2-firebird libobasis24.2-gnome-integration libobasis24.2-graphicfilter libobasis24.2-images libobasis24.2-impress libobasis24.2-kde-integration libobasis24.2-libreofficekit-data libobasis24.2-math libobasis24.2-ogltrans libobasis24.2-onlineupdate libobasis24.2-ooolinguistic libobasis24.2-python-script-provider libobasis24.2-pyuno libobasis24.2-writer libobasis24.2-xsltfilter libreoffice24.2 libobasis24.2-base libobasis24.2-calc libobasis24.2-librelogo libobasis24.2-postgresql-sdbc libreoffice24.2-base libreoffice24.2-calc libreoffice24.2-dict-en libreoffice24.2-dict-es libreoffice24.2-dict-fr libreoffice24.2-draw libreoffice24.2-en-us libreoffice24.2-impress libreoffice24.2-math libreoffice24.2-writer<br></code></pre></td></tr></table></figure>
+<p>中文包：<code>libobasis24.2-zh-cn</code>
+、<code>libreoffice24.2-zh-cn</code></p>
 <h3 id="wps">WPS</h3>
 <p>WPS的字体文件存储在 <code>/usr/share/fonts/wps-office</code>
 。WPS初次打开时缺失和需要的（中文）字体文件有：</p>
@@ -515,6 +609,9 @@ target="_blank" rel="noopener" href="https://pan.baidu.com/s/14dfzUrKzW_OJO4daEr
 <p><a target="_blank" rel="noopener" href="https://rutracker.net/forum/viewtopic.php?t=5332940">crack
 version</a> ，使用过程中若出现需要激活的弹窗，则删掉
 <code>~/.pdfstudio12</code> 再重新打开pdfstudio即可。</p>
+<h3 id="xmind-2023">xmind 2023</h3>
+<p><a
+target="_blank" rel="noopener" href="https://github.com/henryau53/xmind-crack-patch">crack</a></p>
 <h3 id="zotero">Zotero</h3>
 <p><a target="_blank" rel="noopener" href="https://www.zotero.org/">Zotero 官网</a></p>
 <h4 id="安装">安装</h4>
@@ -604,6 +701,8 @@ target="_blank" rel="noopener" href="https://www.yuezeyi.com/294.html">完全删
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean<br></code></pre></td></tr></table></figure>
 <p>（7）修改主题配置文件，直接打开 <code>_config.yml</code>
 进行修改即可。</p>
+<h3 id="zathura-小巧pdf阅读器">zathura 小巧pdf阅读器</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt install zathura<br><span class="hljs-comment"># libgirara-gtk3-3 zathura zathura-pdf-poppler 1038KB</span><br></code></pre></td></tr></table></figure>
 <h2 id="应用商店">应用商店</h2>
 <h3 id="spark-store">spark-store</h3>
 <blockquote>
@@ -772,6 +871,11 @@ E盘的设备名称是<code>/dev/nvm0n1p4</code>。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">7z x -o/home/user/documents file.7z.001<br></code></pre></td></tr></table></figure>
 <h2 id="查看-gtk-的版本">查看 gtk 的版本</h2>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">gtk-launch --version<br></code></pre></td></tr></table></figure>
+<h2 id="bilibili批量取消关注">bilibili批量取消关注</h2>
+<p>在关注列表每一页执行如下代码（F12 - Console控制台）：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">($(<span class="hljs-string">&quot;.be-dropdown-item:contains(&#x27;取消关注&#x27;)&quot;</span>).<span class="hljs-title function_">slice</span>(<span class="hljs-number">0</span>,<span class="hljs-number">10</span>)).<span class="hljs-title function_">click</span>()<br></code></pre></td></tr></table></figure>
+<p>如果出现弹窗或者没有关注的up主但数量还在的情况，请重新刷新再输入以上代码。</p>
+<p>如果不允许复制代码到控制台，则输入<code>allow pasting</code>解除限制。</p>
 <h1 id="常见bug">常见bug</h1>
 <h2 id="fcitx框架候选词不跟随">fcitx框架候选词不跟随</h2>
 <p>在使用Jet Brains系列产品时，使用 fcitx
@@ -794,6 +898,17 @@ send, 毕竟绝大多数情况程序崩溃不是经常能够遇到.</p>
 <p>使用内置的 vim 时，按方向键输出一些乱码。只需要卸载内置的
 <code>vim-common</code> ，安装完整版的 <code>vim</code> 。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt autoremove --purge vim-common<br>sudo apt install vim  <span class="hljs-comment"># 38.3 MB</span><br></code></pre></td></tr></table></figure>
+<h2 id="蓝牙卡住">蓝牙卡住</h2>
+<p>使用 <code>systemctl status bluetooth.service</code>
+命令查看蓝牙服务的运行日志，发现报错</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">Failed to <span class="hljs-built_in">set</span> mode: Authentication Failed (0x05)<br></code></pre></td></tr></table></figure>
+<p>解决方法：可能是需要重新加载蓝牙模块。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo rmmod btusb<br>sudo modprobe btusb<br></code></pre></td></tr></table></figure>
+<h2 id="need-to-be-reinstallcant-find-an-archive">need to be
+reinstall,can’t find an archive</h2>
+<p>The package xxx needs to be reinstalled, but I can't find an archive
+for it</p>
+<p>备份<code>/var/lib/dpkg/status</code>，然后在status中找到报错的xxx包，删除该软件包的全部记录。没删完全会报错~</p>
 
                 
               </div>
@@ -860,7 +975,7 @@ send, 毕竟绝大多数情况程序崩溃不是经常能够遇到.</p>
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年1月18日</div>
+          <div>2024年3月8日</div>
         </div>
       
       
