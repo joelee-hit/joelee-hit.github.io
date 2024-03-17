@@ -24,7 +24,13 @@
 <meta property="og:description" content="自从将 ubuntu 22.04 作为我的主力系统以来，就在实践中遇到的问题进行总结和解答。（供参考） 装系统后先做 删除 snap 查看 snap 安装的应用： 1snap list 卸载 snap 安装的应用程序（ snap_delete_app.sh ），直到 snap list 不返回任何软件： 123for p in $(snap list | awk &amp;#x27;&amp;#123;print">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/re-linuxcore-1.png">
+<meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/image-20240316203317429.png">
+<meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/image-20240309092748084.png">
+<meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/image-20240309100436419.png">
+<meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/image-20240309100535607.png">
+<meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/9cd5cbe546614ed6a7627c3aa2a7c003.png">
 <meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/sw-ve-kdenlive.jpg">
+<meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/image-20231207213817907.png">
 <meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/sw-zotero-pdftk.png">
 <meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/sw-zotero-darkthemebug.png">
 <meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/op-screen-1.png">
@@ -34,7 +40,7 @@
 <meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/bug-fcitx.png">
 <meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/bug-internal-error.png">
 <meta property="article:published_time" content="2024-01-06T16:10:30.000Z">
-<meta property="article:modified_time" content="2024-03-08T09:25:05.067Z">
+<meta property="article:modified_time" content="2024-03-17T04:08:02.917Z">
 <meta property="article:author" content="joelee">
 <meta property="article:tag" content="ubuntu">
 <meta property="article:tag" content="主力系统">
@@ -268,7 +274,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          23k 字
+          34k 字
         
       </span>
     
@@ -279,7 +285,7 @@
         
         
         
-          196 分钟
+          286 分钟
         
       </span>
     
@@ -329,7 +335,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年3月8日 下午
+                    本文最后更新于：2024年3月17日 中午
                   
                 
               </p>
@@ -370,7 +376,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">dpkg --get-selections | grep linux<br></code></pre></td></tr></table></figure>
 <img src="/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/re-linuxcore-1.png" srcset="/myblog/img/loading.gif" lazyload class="" title="image-20240107005910491">
 <p>卸载内核：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt remove --purge linux-headers-6.2.0-37-generic linux-hwe-6.2-headers-6.2.0-37 linux-image-6.2.0-37-generic linux-modules-6.2.0-37-generic linux-modules-extra-6.2.0-37-generic<br><br><span class="hljs-comment"># 一行代码, 批量卸载</span><br>dpkg --get-selections | grep 6.2.0-35 | awk <span class="hljs-string">&#x27;&#123;print $1&#125;&#x27;</span> | xargs sudo apt remove --purge<br><br><span class="hljs-comment"># 检查一遍</span><br>dpkg --get-selections | grep linux<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt remove --purge linux-headers-6.2.0-39-generic linux-hwe-6.2-headers-6.2.0-39 linux-image-6.2.0-39-generic linux-modules-6.2.0-39-generic linux-modules-extra-6.2.0-39-generic<br><br><span class="hljs-comment"># 一行代码, 批量卸载</span><br>dpkg --get-selections | grep 6.2.0-35 | awk <span class="hljs-string">&#x27;&#123;print $1&#125;&#x27;</span> | xargs sudo apt remove --purge -y<br><br><span class="hljs-comment"># 检查一遍</span><br>dpkg --get-selections | grep linux<br></code></pre></td></tr></table></figure>
 <p>接下来我们还需要<strong>更新系统引导</strong>（更新 grup
 ，移除失效的启动项）：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo update-grub　　<span class="hljs-comment"># 根据情况选择grub/grub2</span><br></code></pre></td></tr></table></figure>
@@ -424,6 +430,21 @@ ign</h3>
 <h3 id="安装-apt-fast">安装 apt-fast</h3>
 <p>转载自 https://www.sysgeek.cn/ubuntu-apt-fast/</p>
 <h1 id="常用软件">常用软件</h1>
+<h2 id="学习">学习</h2>
+<h3 id="每日英语听力">每日英语听力</h3>
+<p>缓存目录：<code>/home/joelee/.config/ting_en</code></p>
+<h4 id="crack">crack</h4>
+<p>https://www.52pojie.cn/thread-1869531-1-1.html</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo npm install -g @electron/asar<br>sudo npm uninstall -g asar<br><span class="hljs-built_in">cd</span> /opt/每日英语听力/resources<br>sudo asar extract app.asar ./tmp<br><span class="hljs-built_in">cd</span> tmp<br>sudo vi dist/electron/renderer.js  <span class="hljs-comment"># /save(), n下一个,N上一个</span><br><span class="hljs-comment"># 搜索save(),在第三个后面加上this.ting.istingvip = true,this.ting.tingvipendtime = &quot;2099-10-31T12:34:56Z&quot;,this.ting.tingviptype = &quot;multiyearvip&quot;;</span><br><span class="hljs-comment"># 变成save()&#123;this._store.set(&quot;login&quot;,&#123;user:this.user,ting:this.ting&#125;,this.ting.istingvip = true,this.ting.tingvipendtime=&quot;2099-10-31T12:34:56Z&quot;,this.ting.tingviptype=&quot;multiyearvip&quot;)&#125;</span><br>sudo asar pack ./ app.asar<br>killall ting_en<br>sudo <span class="hljs-built_in">mv</span> /opt/每日英语听力/resources/app.asar /opt/每日英语听力/resources/tmp/app.asar.bak<br>sudo <span class="hljs-built_in">mv</span> ./app.asar ../ <br></code></pre></td></tr></table></figure>
+<img src="/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/image-20240316203317429.png" srcset="/myblog/img/loading.gif" lazyload class="" title="image-20240316203317429">
+<h3 id="goldendict">goldendict</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt-fast install goldendict<br><span class="hljs-comment"># 60MB</span><br><span class="hljs-comment"># goldendict libeb16 libqt5help5 libqt5multimedia5-plugins libqt5multimediagsttools5 libqt5multimediawidgets5 libqt5sensors5 libqt5webkit5</span><br></code></pre></td></tr></table></figure>
+<p>缓存目录：<code>~/.goldendict</code></p>
+<p>教程：https://blog.csdn.net/weixin_56463218/article/details/132645984</p>
+<blockquote>
+<p>https://sspai.com/post/85225#!</p>
+<p>https://www.cnblogs.com/keatonlao/p/12702571.html</p>
+</blockquote>
 <h2 id="编程">编程</h2>
 <h3 id="codeblocks">codeblocks</h3>
 <p><a target="_blank" rel="noopener" href="https://www.codeblocks.org/">官网</a> Code::Blocks is a free
@@ -434,9 +455,40 @@ target="_blank" rel="noopener" href="https://www.codeblocks.org/downloads/binari
 .tar.xz</a></p>
 <p>（2）通过发行版的包管理器</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt install codeblocks<br><span class="hljs-comment"># codeblocks codeblocks-common libastyle3 libcodeblocks0 libutempter0 xterm 23.8 MB</span><br>sudo apt install codeblocks-contrib<br><span class="hljs-comment"># codeblocks-contrib libwxsmithlib0 valgrind 100MB</span><br></code></pre></td></tr></table></figure>
-<h4 id="配置主题">配置主题</h4>
+<h4 id="配置代码区主题">配置代码区主题</h4>
 <p>主题文件位于
 <code>/home/joelee/.config/codeblocks/default.conf</code> 。</p>
+<h4 id="ui主题">UI主题</h4>
+<p>由于我的系统使用dark的主题，所以cb也会变成dark主题，但是cb的dark主题非常的难看，还不如全白，所以只需将cb的启动器文件中的<code>Exec</code>项改成
+<code>Exec=env GTK_THEME=Pop-light codeblocks %F</code> 。效果如下：</p>
+<img src="/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/image-20240309092748084.png" srcset="/myblog/img/loading.gif" lazyload class="" title="image-20240309092748084">
+<h4 id="更改终端">更改终端</h4>
+<p>xterm终端太丑了，且不能对其文本进行操作。</p>
+<p><code>settings - Environment - General Settings - Terminal to launch console programs</code>
+，选择<code>gnome-terminal -t $TITLE x</code> 。更详细的命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">gnome-terminal --geometry 80x20+100+100 --hide-menubar -t <span class="hljs-variable">$TITLE</span> -x <br></code></pre></td></tr></table></figure>
+<h4 id="代码补全">代码补全</h4>
+<p><code>Settings - Editor - General Settings</code>：有个代码补全的设置的区域，</p>
+<img src="/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/image-20240309100436419.png" srcset="/myblog/img/loading.gif" lazyload class="" title="image-20240309100436419">
+<p>另外，切换到<code>Code Completion</code>界面，设置</p>
+<img src="/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/image-20240309100535607.png" srcset="/myblog/img/loading.gif" lazyload class="" title="image-20240309100535607">
+<h4 id="行号宽度">行号宽度</h4>
+<p><code>Setting-&gt;Editor-&gt;Margins and caret</code> ，修改width for
+line numbers，选中dynamic setting 即可。</p>
+<p>修改光标的形状，颜色，宽度：直接修改Caret中的属性即可，光标颜色选择白色。</p>
+<p>设置了行号宽度感觉好看多了，但是编辑器左边白一块，和编辑器的暗黑背景不搭配啊，还可以继续优化
+选择
+Settings-&gt;Environment-&gt;Colours，Category下拉列表选择Editor（英语好一点的人都知道我在干什么）
+修改如下标注的属性，Line numbers foreground
+color（这是行号数字的颜色，随便改），其余全部改为和编辑器一样的暗黑色，（R：40，G：50，B：40）
+点击ok，大功告成！</p>
+<h4 id="禁用spellcheck插件">禁用spellcheck插件</h4>
+<p>解决方法：禁用 SpellChecker 插件，选择plugins，弹出下拉框，再选择
+最后一个manage plugins，找到Spell Checker 选中再点击
+Disable，就可以了。</p>
+<img src="/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/9cd5cbe546614ed6a7627c3aa2a7c003.png" srcset="/myblog/img/loading.gif" lazyload class="" title="img">
+<h4 id="自动换行">自动换行</h4>
+<p>settings-&gt;other editor settings-&gt;word wrap打勾</p>
 <h3 id="rstudio">Rstudio</h3>
 <p><a target="_blank" rel="noopener" href="https://posit.co/download/rstudio-desktop/">官网</a> <a
 target="_blank" rel="noopener" href="https://cran.rstudio.com/">R官网</a> <a
@@ -459,6 +511,18 @@ target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_39811386/artic
 Repository，更换为清华源 ，</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">options(<span class="hljs-string">&quot;repos&quot;</span> = c(CRAN=<span class="hljs-string">&quot;https://mirrors.tuna.tsinghua.edu.cn/CRAN/&quot;</span>))<br>options()<span class="hljs-variable">$repos</span>  <span class="hljs-comment"># 查看使用install.packages安装时的默认镜像</span><br>options()<span class="hljs-variable">$BioC_mirror</span> <span class="hljs-comment"># 查看使用bioconductor的默认镜像</span><br>options(BioC_mirror=<span class="hljs-string">&quot;https://mirrors.ustc.edu.cn/bioc/&quot;</span>) <span class="hljs-comment"># 指定镜像，这个是中国科技大学镜像</span><br></code></pre></td></tr></table></figure>
 </blockquote>
+<h3 id="vscode">vscode</h3>
+<h4 id="去除窗口标题栏">去除窗口标题栏</h4>
+<p>ctrl+shift+p，呼出搜索栏，输入<code>settings</code>
+，打开<code>Settings(UI)</code>，再搜索<code>window.titleBarStyle</code>，将该项改为“custom”。</p>
+<h3 id="nodejs">nodejs</h3>
+<h4 id="npm清理缓存">npm清理缓存</h4>
+<p>缓存位置：<code>npm config get cache</code>=<code>~/.npm</code>
+清理命令：<code>npm cache clean --force</code>
+用户配置位置：<code>/home/joelee/.npmrc</code></p>
+<p>全局安装位置：<code>npm config get prefix</code> = <code>/usr</code>
+或者 <code>npm root -g</code> = <code>/usr/lib/node_modules</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">1、设置npm安装的地址<br>npm config <span class="hljs-built_in">set</span> prefix <span class="hljs-string">&quot;&quot;</span><br><br>2、npm缓存位置设置<br>npm config <span class="hljs-built_in">set</span> cache <span class="hljs-string">&quot;&quot;</span><br></code></pre></td></tr></table></figure>
 <h2 id="视频剪辑">视频剪辑</h2>
 <h3 id="kdenlive">kdenlive</h3>
 <p>免费且开源的视频编辑器，官网链接：<a
@@ -475,6 +539,7 @@ target="_blank" rel="noopener" href="https://kdenlive.org/en/download/">kdenlive
 </blockquote>
 <p>在应用终端依次执行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ spark-store-console<br><span class="hljs-comment"># 选择&#x27;社交沟通&#x27;, 再选择&#x27;微信Linux&#x27;, </span><br>标题：微信Linux<br>版本：2.1.9<br>包名：store.spark-app.wechat-linux-spark<br>作者：懵仙兔兔 &lt;acgm@qq.com&gt;<br>投稿者:shenmo &lt;jifengshenmo@outlook.com&gt;<br>官网：https://wx.qq.com/<br>大小：87.78 MB<br>更新时间：2023-11-17 20:17:51<br>介绍：<br>微信 <span class="hljs-keyword">for</span> Linux<br>支持了语音通话<br><br><span class="hljs-comment"># 选择&#x27;install&#x27;</span><br></code></pre></td></tr></table></figure>
+<p>存储目录：<code>/home/joelee/.config/weixin/wechat</code></p>
 <h4 id="wechat-beta">wechat-beta</h4>
 <p><a target="_blank" rel="noopener" href="https://www.52pojie.cn/thread-1896902-1-1.html">1.0.0.150
 介绍链接</a> 数据存储目录是 <code>/home/joelee/.xwechat</code>
@@ -577,6 +642,48 @@ vim）来编辑这个文件，并删除相关行。</p></li>
 <p>https://github.com/tesseract-ocr/tessdata/raw/3.04.00/osd.traineddata</p>
 <h4 id="更准确的tesseract中文包">更准确的tesseract中文包</h4>
 <p>https://github.com/gumblex/tessdata_chi?tab=readme-ov-file</p>
+<h3 id="vmware">vmware</h3>
+<h3 id="vm-pro-17">VM pro 17</h3>
+<p>安装教程：https://docs.vmware.com/cn/VMware-Workstation-Pro/17/com.vmware.ws.using.doc/GUID-1F5B1F14-A586-4A56-83FA-2E7D8333D5CA.html</p>
+<p>下载链接：https://www.vmware.com/cn/products/workstation-pro/workstation-pro-evaluation.html</p>
+<p>民间安装教程：https://www.cnblogs.com/wthuskyblog/p/16349940.html</p>
+<p>破解：https://www.52pojie.cn/thread-1804571-1-1.html</p>
+<p>卸载：https://docs.vmware.com/cn/VMware-Workstation-Pro/17/com.vmware.ws.using.doc/GUID-05E4C876-F32C-49D2-82B4-8C759691E7F5.html</p>
+<p>https://zhuanlan.zhihu.com/p/655902568</p>
+<p>VMware Workstation v17.x 永久许可证激活密钥：
+MC60H-DWHD5-H80U9-6V85M-8280D 4A4RR-813DK-M81A9-4U35H-06KND
+NZ4RR-FTK5H-H81C1-Q30QH-1V2LA JU090-6039P-08409-8J0QH-2YR7F
+4Y09U-AJK97-089Z0-A3054-83KLA 4C21U-2KK9Q-M8130-4V2QH-CF810</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs bash">sh VMware-Workstation-xxxx-xxxxxxx.architecture.bundle [--option]<br><span class="hljs-comment"># xxxx-xxxxxxx 是版本号和内部版本号， architecture 为 x86_64， option 是命令行选项。</span><br><br><span class="hljs-comment"># 接受开放虚拟化格式 (OVF) 工具许可协议。</span><br><span class="hljs-comment"># 如果您使用 --console 选项，或在不支持 GUI 向导的主机系统中安装 Workstation Pro，请按 Enter 键滚动浏览，阅读许可协议，或者键入 q 跳到 **[是/否]**提示。</span><br><br><span class="hljs-comment"># 安装记录</span><br>sudo ./VMware-Workstation-Full-17.5.0-22583795.x86_64.bundle --console<br>[sudo] password <span class="hljs-keyword">for</span> joelee: <br>Extracting VMware Installer...<span class="hljs-keyword">done</span>.<br>You must accept the VMware Workstation End User License Agreement to<br><span class="hljs-built_in">continue</span>.  Press Enter to proceed.<br>...<br>14.21. Replace Section 13.23 (<span class="hljs-string">&quot;VMware,&quot;</span> <span class="hljs-string">&quot;We,&quot;</span> or <span class="hljs-string">&quot;Us&quot;</span>) with the following:<br><span class="hljs-string">&quot;&#x27;VMware,&#x27; &#x27;We,&#x27; or &#x27;Us&#x27; means VMware, Inc., a Delaware corporation.&quot;</span><br><span class="hljs-comment"># 要注意它是默认你不同意的</span><br>Do you agree? [<span class="hljs-built_in">yes</span>/no]:<br><br>12.12  Contact Information.  Please direct legal notices or other<br>correspondence to VMware, Inc., 3401 Hillview Avenue, Palo Alto, California<br>94304, United States of America.  If You have any questions concerning this<br>EULA, please send an email to info@vmware.com.<br><br>Do you agree? [<span class="hljs-built_in">yes</span>/no]: <br><br><span class="hljs-comment"># 过完这个后就好多了</span><br>Enter license key. (optional) You can enter this information later.: <span class="hljs-comment"># 之后再输入</span><br><br>The product is ready to be installed.  Press Enter to begin<br>installation or Ctrl-C to cancel.<br><br>Installing VMware Workstation 17.5.0<br>    Configuring...<br>[<span class="hljs-comment">######################################################################] 100%</span><br>Installation was successful.<br></code></pre></td></tr></table></figure>
+<p>卸载：<code>vmware-installer -u vmware-workstation</code></p>
+<p><strong>坑</strong>：</p>
+<p>（1）首次开启虚拟机时出现弹窗：</p>
+<img src="/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/image-20231207213817907.png" srcset="/myblog/img/loading.gif" lazyload class="" title="image-20231207213817907">
+<blockquote>
+<p>https://www.cnblogs.com/wthuskyblog/p/16349940.html</p>
+<p>https://blog.csdn.net/HuoRan0614/article/details/86709945</p>
+</blockquote>
+<p>首先要清楚“sercure
+boot”的安全验证是通过“安全密钥”机制来实现的，即每个操作系统或驱动程序必须对应一个“密钥对”，其中的“公钥”是内置与主板中的，“私钥”则附在自身上，只有”公钥“和“私钥”能够对应上，该程序才可以执行。我们要想让VMware驱动器运行，也必须为它创建“密钥对”。具体操作如下：</p>
+<ol type="1">
+<li>为vmmon和vmnet组件生成密钥对</li>
+</ol>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs asciidoc">openssl req -new -x509 -newkey rsa:2048 -keyout VMW.priv -outform DER -out VMW.der -nodes -days 36500 -subj &quot;/CN=VMware/&quot;<br><br>CN=VMware/&quot;<br>......<span class="hljs-code">+.....+</span>....<span class="hljs-code">+......+</span>.....<span class="hljs-code">+.......+</span>............<span class="hljs-code">+.........+</span>...............<span class="hljs-code">+..+</span>.......<span class="hljs-code">+++</span><span class="hljs-code">+++</span><span class="hljs-code">+++</span><span class="hljs-code">+++</span><span class="hljs-code">+++</span><span class="hljs-code">+++</span><span class="hljs-code">+++</span><span class="hljs-code">+++</span><span class="hljs-code">+++</span><span class="hljs-code">+++</span><span class="hljs-code">+++</span><span class="hljs-code">+++</span><span class="hljs-code">+++</span><span class="hljs-strong">*.+................+.....+.+...+..+.............+..+.+............+...+...+..+.............+......+...+........+...+.........+++++++++++++++++++++++++++++++++++++++*</span>............<span class="hljs-code">+.+</span>.....<span class="hljs-code">+.+</span>...<span class="hljs-code">+..+</span>...<span class="hljs-code">+...+</span>.........<span class="hljs-code">+......+</span>.......<span class="hljs-code">+............+</span>.....<span class="hljs-code">+++</span><span class="hljs-code">+++</span><br><span class="hljs-section">...+................+.....+.+................................+...+....+........+.......+...+..+.........................+........+...+....+.....+....+..+.......+..+......+.......+.....+.............+..+.+.....+.+.....+.+...+.....+++++++++++++++++++++++++++++++++++++++*.+...+++++++++++++++++++++++++++++++++++++++*.......+....+...........+.....................+.+..+.+..+....+........+.+..+...............+...+.+......+.................+.+............+.....+.........+...............+...+.+.........+..+.........+....+...+...+............+..+.+......+........+.+.....+.........+......+.+...........+...+....+...+.....+...........................+.+......+...+......+............+..+.+..+.......+..+...............+................+..+...+....+...+........+...+.........+.............+..+.+.....+......+.+............+.....+...+...+.......+...+..+..........+.....+.......+..+...+...............+.+.........+.................+.+.....+.........+...+...+.......+..+......+.......+...+..+.+..............+.......+......+........+....+...+..+.......+.....+..........+......+..+................+...........+.+..............+....+.................+...+...............+.+.....+..........+.....+.........+.......+.....+...+......+......+.............+.....+.......+.................+.+.....+.+........+.......+......+..+................+..+.......+..+...+...+....+...+............+..............+.........++++++</span><br><span class="hljs-section">-----</span><br></code></pre></td></tr></table></figure>
+<p>   VMW.der 是公钥（证书文件），VMW.priv是私钥   
+(其中的“VMW”是密钥的名字，也可以改成别的）</p>
+<ol type="1">
+<li>为vmmon和vmnet组件附上生成的密钥</li>
+</ol>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs gams">sudo /usr/src/linux-headers-<span class="hljs-symbol">$</span>(uname -r)/scripts/<span class="hljs-built_in">sign</span>-<span class="hljs-keyword">file</span> sha256 ./VMW.priv ./VMW.der <span class="hljs-symbol">$</span>(modinfo -n vmmon)<br>sudo /usr/src/linux-headers-<span class="hljs-symbol">$</span>(uname -r)/scripts/<span class="hljs-built_in">sign</span>-<span class="hljs-keyword">file</span> sha256 ./VMW.priv ./VMW.der <span class="hljs-symbol">$</span>(modinfo -n vmnet)<br></code></pre></td></tr></table></figure>
+<ol type="1">
+<li>将公钥插入系统的MOK列表中</li>
+</ol>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs actionscript">sudo mokutil --<span class="hljs-meta"><span class="hljs-keyword">import</span> VMW.der</span><br></code></pre></td></tr></table></figure>
+<p>  这一步会让你创建一个密码，记住这个密码，一会儿有用。这个密码很重要。</p>
+<ol type="1">
+<li>重启电脑
+重启时会进入到一个类似于BIOS的界面（UEFI界面），这一步忘记截图了，总之，根据界面上的说明进行选择，完成密钥的插入（最后让输入的密码即为上一步设置的密码）。开启电脑后，VMware就能正常运行了。</li>
+</ol>
 <h2 id="文字工作">文字工作</h2>
 <h3 id="libreoffice">libreoffice</h3>
 <p><a
@@ -589,6 +696,8 @@ target="_blank" rel="noopener" href="https://zh-cn.libreoffice.org/download/libr
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 42个包</span><br>libobasis24.2-ooofonts libreoffice24.2-debian-menus libreoffice24.2-ure libobasis24.2-core libobasis24.2-draw libobasis24.2-en-us libobasis24.2-extension-beanshell-script-provider libobasis24.2-extension-javascript-script-provider libobasis24.2-extension-mediawiki-publisher libobasis24.2-extension-nlpsolver libobasis24.2-extension-pdf-import libobasis24.2-extension-report-builder libobasis24.2-firebird libobasis24.2-gnome-integration libobasis24.2-graphicfilter libobasis24.2-images libobasis24.2-impress libobasis24.2-kde-integration libobasis24.2-libreofficekit-data libobasis24.2-math libobasis24.2-ogltrans libobasis24.2-onlineupdate libobasis24.2-ooolinguistic libobasis24.2-python-script-provider libobasis24.2-pyuno libobasis24.2-writer libobasis24.2-xsltfilter libreoffice24.2 libobasis24.2-base libobasis24.2-calc libobasis24.2-librelogo libobasis24.2-postgresql-sdbc libreoffice24.2-base libreoffice24.2-calc libreoffice24.2-dict-en libreoffice24.2-dict-es libreoffice24.2-dict-fr libreoffice24.2-draw libreoffice24.2-en-us libreoffice24.2-impress libreoffice24.2-math libreoffice24.2-writer<br></code></pre></td></tr></table></figure>
 <p>中文包：<code>libobasis24.2-zh-cn</code>
 、<code>libreoffice24.2-zh-cn</code></p>
+<p>计算大小：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">dpkg-query -W --showformat=<span class="hljs-string">&#x27;$&#123;Installed-Size&#125;\n&#x27;</span> libobasis24.2-ooofonts libreoffice24.2-debian-menus libreoffice24.2-ure libobasis24.2-core libobasis24.2-draw libobasis24.2-en-us libobasis24.2-extension-beanshell-script-provider libobasis24.2-extension-javascript-script-provider libobasis24.2-extension-mediawiki-publisher libobasis24.2-extension-nlpsolver libobasis24.2-extension-pdf-import libobasis24.2-extension-report-builder libobasis24.2-firebird libobasis24.2-gnome-integration libobasis24.2-graphicfilter libobasis24.2-images libobasis24.2-impress libobasis24.2-kde-integration libobasis24.2-libreofficekit-data libobasis24.2-math libobasis24.2-ogltrans libobasis24.2-onlineupdate libobasis24.2-ooolinguistic libobasis24.2-python-script-provider libobasis24.2-pyuno libobasis24.2-writer libobasis24.2-xsltfilter libreoffice24.2 libobasis24.2-base libobasis24.2-calc libobasis24.2-librelogo libobasis24.2-postgresql-sdbc libreoffice24.2-base libreoffice24.2-calc libreoffice24.2-dict-en libreoffice24.2-dict-es libreoffice24.2-dict-fr libreoffice24.2-draw libreoffice24.2-en-us libreoffice24.2-impress libreoffice24.2-math libreoffice24.2-writer | awk <span class="hljs-string">&#x27;&#123;s+=$1&#125; END &#123;print s&#125;&#x27;</span><br></code></pre></td></tr></table></figure>
 <h3 id="wps">WPS</h3>
 <p>WPS的字体文件存储在 <code>/usr/share/fonts/wps-office</code>
 。WPS初次打开时缺失和需要的（中文）字体文件有：</p>
@@ -876,6 +985,45 @@ E盘的设备名称是<code>/dev/nvm0n1p4</code>。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">($(<span class="hljs-string">&quot;.be-dropdown-item:contains(&#x27;取消关注&#x27;)&quot;</span>).<span class="hljs-title function_">slice</span>(<span class="hljs-number">0</span>,<span class="hljs-number">10</span>)).<span class="hljs-title function_">click</span>()<br></code></pre></td></tr></table></figure>
 <p>如果出现弹窗或者没有关注的up主但数量还在的情况，请重新刷新再输入以上代码。</p>
 <p>如果不允许复制代码到控制台，则输入<code>allow pasting</code>解除限制。</p>
+<h2 id="更改gtk应用的标题栏的高度">更改gtk应用的标题栏的高度</h2>
+<p>编辑<code>~/.config/gtk-3.0/gtk.css</code>，添加</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs css">headerbar<span class="hljs-selector-class">.default-decoration</span> &#123;<br> <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">3px</span>;<br> <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">3px</span>;<br> <span class="hljs-attribute">min-height</span>: <span class="hljs-number">24px</span>;    <span class="hljs-comment">/* 标题栏高度 */</span><br> <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.0em</span>;<br>&#125;<br><br>headerbar<span class="hljs-selector-class">.default-decoration</span> <span class="hljs-selector-tag">button</span><span class="hljs-selector-class">.titlebutton</span> &#123;<br> <span class="hljs-attribute">padding-top</span>: <span class="hljs-number">3px</span>;<br> <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">3px</span>;<br> <span class="hljs-attribute">min-height</span>: <span class="hljs-number">0px</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>然后按<code>alt+F2</code>，输入<code>r</code>重载桌面。</p>
+<h2 id="清理">清理</h2>
+<h3 id="方法">方法</h3>
+<p>（1）如果是虚拟机的话，可以删除.cache/vmware/drag_and_drop/路径下缓存区数据，因为通过vmware安装的虚拟机时会安装vmware
+tools,其中为了方便拷贝数据，会在ubuntu系统.cache/vmware/drag_and_drop/路径下创建一些缓存目录，从windows中拷贝过来会先存储在这里，粘贴完了我们自然可以把他删除。</p>
+<p>（2）在/var/log/journal/垃圾日志文件，可以看到他的内存占用是比较大的，那么我们可以通过如下命令来清除这些日志文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash">journalctl --disk-usage        <span class="hljs-comment"># 检查日志大小</span><br>sudo journalctl --vacuum-time=1w    <span class="hljs-comment"># 只保留一周的日志</span><br><br>sudo journalctl --vacuum-size=500M    <span class="hljs-comment"># 只保留500MB的日志</span><br><br><span class="hljs-built_in">rm</span> -rf /var/log/journal/askd342fh35aewfhagf67iuro1（垃圾文件）    <span class="hljs-comment"># 直接删除/var/log/journal/目录下的日志文件</span><br><br><span class="hljs-built_in">du</span> -sh ~/.cache/thumbnails       <span class="hljs-comment"># 检查缩略图缓存的大小</span><br><span class="hljs-built_in">rm</span> -rf ~/.cache/thumbnails/*     <span class="hljs-comment"># 清除缩略图缓存</span><br></code></pre></td></tr></table></figure>
+<p>（3）清理升级缓存以及无用包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt-get autoclean                <span class="hljs-comment"># 删除旧版本软件缓存</span><br>sudo apt-get clean                    <span class="hljs-comment"># 删除系统内所有软件缓存</span><br>sudo apt-get autoremove             <span class="hljs-comment"># 删除系统不再使用的孤立软件</span><br></code></pre></td></tr></table></figure>
+<p>（4）如果电脑装有<a
+target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=VScode&amp;spm=1001.2101.3001.7020">VScode</a>可以删除VScode中ipch文件（可以在磁盘分析器baobab中查看下面路径内容）</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-regexp">/home/</span>joelee<span class="hljs-regexp">/.cache/</span>vscode-cpptools/ipch  <span class="hljs-comment"># 63MB</span><br></code></pre></td></tr></table></figure>
+<p><strong>Cache</strong>：在计算机存储系统的层次结构中，介于中央处理器和主存之间的高速小容量存储器。它和主存储器一起构成一级的存储器。高速缓存存储器和主存存储器之间信息的调度和传送是由硬件自动进行的。
+<strong>Ipch</strong>：这些文件是Visual
+Studio用来保存预编译版的头文件和Intellisense用的。如果删除后，重新加载项目会重建这些文件，但VSCode中设定范围后就不会产生超过这个数的缓存大小。
+ipch文件内包含缓存的预编译头文件（PCH），vscode使用的时间越长，那么这个文件夹内的缓存就越多，最终会造成较大的内存占用。当我们不用来运行很大的文件时，只是利用它来敲代码，用不到预编译头文件时可以关闭这个功能。
+<strong>操作</strong> 在VSCode菜单栏中
+文件-&gt;首选项-&gt;设置（ctrl+，），然后搜索C_Cpp.intelliSenseCacheSize,修改其默认值5120为512</p>
+<p>（5）如果装有anaconda软件，当使用一段时间之后会占用相当一部分磁盘空间到pkgs文件夹下，在<a
+target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=conda&amp;spm=1001.2101.3001.7020">conda</a>的设计中，目录’pkgs’是下载、存放缓存，当通过pip下载一些软件时，先去缓存区查找有无目标，若无目标会下载包至缓存区当中，再解压安装到指定环境当中的lib/pythonx.x/site-packages中。
+同时，anaconda一起携带的包也会放在pkgs中。我们在构建一些envs的时候，对一些包的依赖会通过硬盘链接链接到pkgs目录，这样虚拟环境生成的速度大大加快，占用空间就大大减小了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda clean -p  <span class="hljs-comment"># 这个命令会检查哪些包没有在包缓存中被硬依赖到其他地方，并删除它们</span><br>conda clean --packages  <span class="hljs-comment"># 删除从不使用的包</span><br>conda clean --tarballs  <span class="hljs-comment"># 删除tar包</span><br>conda clean -a  <span class="hljs-comment"># 更强力些，删除索引缓存、锁定文件、未使用过的包和tar包</span><br></code></pre></td></tr></table></figure>
+<p>删除不用的pip缓存</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">rm</span> -rf ~/.cache/pip/*<br></code></pre></td></tr></table></figure>
+<p>（6）在
+/var/lib路径下能查到snapd文件占用内存很大，通过百度发现snap是一款开源的压缩，只读文件系统，基于GPL协议发行的软件打包格式。一旦snap被安装后，其就有一个只读的文件系统和一个可写入的区域。应用自身的执行文件、库、依赖包都被放在这个只读目录，意味着该目录不能被随意篡改和写入。
+所以说snap不是一个必须要用到的软件，后续用到也可以再次下载。
+通过下面命令删除snapd</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt-fast autoremove --purge snapd<br></code></pre></td></tr></table></figure>
+<p>（7）清理rc包</p>
+<p>有些包卸载不彻底，也会导致各种问题。
+debian系的底层包管理程序dpkg可以对于帮助我们找到这些包。</p>
+<p>使用<code>dpkg --list</code>可以查看所有包的状态，其中前两位表示状态，第一位为期望的状态，第二位为实际的状态。可以大致理解为：当我们输入安装命令时，第一位置为i（表示install），当命令完成时，第二位置为i。
+更细节的表示可以参考文档，或者查看：https://linuxprograms.wordpress.com/2010/05/11/status-dpkg-list/</p>
+<p>一个常见的非理想状态是：第一位为r（removed），第二位为c（Cfg-file存在)。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 查看rc状态的包</span><br>dpkg --list |grep <span class="hljs-string">&quot;^rc&quot;</span><br><span class="hljs-comment"># 清除</span><br>dpkg --list |grep <span class="hljs-string">&quot;^rc&quot;</span> | <span class="hljs-built_in">cut</span> -d <span class="hljs-string">&quot; &quot;</span> -f 3 | xargs sudo dpkg --purge<br><span class="hljs-comment"># 或者使用aptitude</span><br>sudo aptitude purge <span class="hljs-string">&quot;~c&quot;</span><br></code></pre></td></tr></table></figure>
 <h1 id="常见bug">常见bug</h1>
 <h2 id="fcitx框架候选词不跟随">fcitx框架候选词不跟随</h2>
 <p>在使用Jet Brains系列产品时，使用 fcitx
@@ -975,7 +1123,7 @@ for it</p>
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年3月8日</div>
+          <div>2024年3月17日</div>
         </div>
       
       
