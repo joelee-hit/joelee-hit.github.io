@@ -16,15 +16,15 @@
   <meta name="author" content="joelee">
   <meta name="keywords" content="">
   
-    <meta name="description" content="一直期待在ubuntu 22.04 上实现平铺式窗口，所以有了此文章，记录我的探索。经过对比，选择轻量级窗口管理器dwm。在动手之前，先观看B站UP对dwm的安装和配置，还可以看ubuntu配置dwm。感觉dwm非常符合我对平铺式窗口管理器的想象，就是看到的博主都是用arch linux的，没有使用ubuntu实践过的。suckless极简桌面。 更新 应该先make clean all，再修改c">
+    <meta name="description" content="一直期待在ubuntu 22.04 上实现平铺式窗口，所以有了此文章，记录我的探索。经过对比，选择轻量级窗口管理器dwm。在动手之前，先观看B站UP对dwm的安装和配置，还可以看ubuntu配置dwm。感觉dwm非常符合我对平铺式窗口管理器的想象，就是看到的博主都是用arch linux的，没有使用ubuntu实践过的。suckless极简桌面教程1。B站up主‘称呼我为c先生’、他的github">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ubuntu_windowmanager">
-<meta property="og:url" content="https://joelee-hit.gitee.io/2024/05/16/ubuntu-windowmanager/index.html">
+<meta property="og:url" content="https://joelee-hit.github.io/joelee-hit.github.io/2024/05/16/ubuntu-windowmanager/index.html">
 <meta property="og:site_name" content="joelee&#39;s blog">
-<meta property="og:description" content="一直期待在ubuntu 22.04 上实现平铺式窗口，所以有了此文章，记录我的探索。经过对比，选择轻量级窗口管理器dwm。在动手之前，先观看B站UP对dwm的安装和配置，还可以看ubuntu配置dwm。感觉dwm非常符合我对平铺式窗口管理器的想象，就是看到的博主都是用arch linux的，没有使用ubuntu实践过的。suckless极简桌面。 更新 应该先make clean all，再修改c">
+<meta property="og:description" content="一直期待在ubuntu 22.04 上实现平铺式窗口，所以有了此文章，记录我的探索。经过对比，选择轻量级窗口管理器dwm。在动手之前，先观看B站UP对dwm的安装和配置，还可以看ubuntu配置dwm。感觉dwm非常符合我对平铺式窗口管理器的想象，就是看到的博主都是用arch linux的，没有使用ubuntu实践过的。suckless极简桌面教程1。B站up主‘称呼我为c先生’、他的github">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-05-15T16:13:26.000Z">
-<meta property="article:modified_time" content="2024-05-16T12:13:54.449Z">
+<meta property="article:modified_time" content="2024-05-17T02:38:42.384Z">
 <meta property="article:author" content="joelee">
 <meta property="article:tag" content="dwm">
 <meta property="article:tag" content="window-manager">
@@ -72,7 +72,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"joelee-hit.gitee.io","root":"/myblog/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"UU4TJ0JQzDgf0er5h2RfW8ve-gzGzoHsz","app_key":"px4eIsDZQBJRxIUkt6PCJpNH","server_url":"https://uu4tj0jq.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/myblog/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"joelee-hit.github.io","root":"/myblog/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"UU4TJ0JQzDgf0er5h2RfW8ve-gzGzoHsz","app_key":"px4eIsDZQBJRxIUkt6PCJpNH","server_url":"https://uu4tj0jq.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/myblog/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -257,7 +257,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          25k 字
+          26k 字
         
       </span>
     
@@ -268,7 +268,7 @@
         
         
         
-          208 分钟
+          218 分钟
         
       </span>
     
@@ -318,7 +318,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2024年5月16日 晚上
+                    本文最后更新于：2024年5月17日 上午
                   
                 
               </p>
@@ -332,7 +332,10 @@ target="_blank" rel="noopener" href="https://dwm.suckless.org/">dwm</a>。在动
 target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV11J411t7RY/?p=1&amp;t=1325">B站UP对dwm的安装和配置</a>，还可以看<a
 target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/262067759">ubuntu配置dwm</a>。感觉dwm非常符合我对平铺式窗口管理器的想象，就是看到的博主都是用arch
 linux的，没有使用ubuntu实践过的。<a
-target="_blank" rel="noopener" href="https://cloud-atlas.readthedocs.io/zh-cn/latest/linux/desktop/suckless/index.html">suckless极简桌面</a>。</p>
+target="_blank" rel="noopener" href="https://cloud-atlas.readthedocs.io/zh-cn/latest/linux/desktop/suckless/index.html">suckless极简桌面教程1</a>。<a
+target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1FT411Z7A7/?spm_id_from=..search-card.all.click">B站up主‘称呼我为c先生’</a>、<a
+target="_blank" rel="noopener" href="https://github.com/yaocccc/dwm?tab=readme-ov-file">他的github
+dwm仓库</a>。</p>
 <h2 id="更新">更新</h2>
 <p>应该先<code>make clean all</code>，再修改<code>config.h</code>，而不是直接修改<code>config.def.h</code></p>
 <h2 id="dwm">dwm</h2>
@@ -591,6 +594,29 @@ B隐藏或显示窗口标题栏。</li>
 Window会话的启动过程文件<code>~/.xinitrc</code>或<code>~/.xsession</code>，前者适用于直接<code>startx</code>启动，后者除了<code>startx</code>外还适用于Display
 Manager启动。我既然选择命令行界面，当然选择修改<code>~/.xinitrc</code>（这也是dwm官方推荐）：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">exec</span> dwm<br></code></pre></td></tr></table></figure>
+<h2 id="坑">坑</h2>
+<h3
+id="dwm不沿用gnome对于gtk应用的配置">dwm不沿用gnome对于gtk应用的配置</h3>
+<p><a
+target="_blank" rel="noopener" href="https://superuser.com/questions/391982/how-do-i-get-dwm-to-use-the-gnome-settings">How
+do i get dwm to use the gnome settings</a>，I'm using dwm on Gentoo
+GNU/Linux, but GTK+ applications launched from it don't load the correct
+GNOME settings (fonts / styles). I've tried setting .gtkrc-2.0 and
+gnome-session. I can't find gnome-settings-daemon on Gentoo, since it's
+not in the package of the same name.</p>
+<p>Does anybody know how to do this?</p>
+<p><strong>Answer</strong>: Gnome-Session-Daemon needs a dbus session to
+run. You do not specify how you are actually launching everything. The
+link below goes into starting gnome-session and/or
+Gnome-settings-Daemon.</p>
+<p>http://www.gentoo.org/proj/en/desktop/gnome/howtos/gnome-2.16-upgrade.xml?style=printable</p>
+<p>Are you using a Login Manager? Or just launching from xinitrc?</p>
+<p>If you are using xinitrc, you can launch like this -- after using
+something like lxappearance to set your gtk themes/icons.</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">exec ck-launch-session dbus-launch --sh-syntax --<span class="hljs-keyword">exit</span>-with-session ~<span class="hljs-regexp">/bin/</span>startdwm<br></code></pre></td></tr></table></figure>
+<p>With /bin/startdwm being an bash script</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/bash</span><br><span class="hljs-comment">#this file is called by .xinitrc to start some nice apps for dwm</span><br><br>xrdb -merge ~/.Xresources &amp;<br><br>xfce4-power-manager &amp;<br><br>sh ~/.fehbg &amp;<br><br><span class="hljs-keyword">while</span> <span class="hljs-literal">true</span>; <span class="hljs-keyword">do</span><br>    xsetroot -name <span class="hljs-string">&quot;<span class="hljs-subst">$(date +<span class="hljs-string">&quot;%a %d.%m/%H:%M:%S&quot;</span>)</span> <span class="hljs-subst">$(df -h|grep root|awk &#x27;&#123;print $4&#125;&#x27;)</span>&quot;</span><br>    <span class="hljs-built_in">sleep</span> 1<br><span class="hljs-keyword">done</span> &amp;<br><br><span class="hljs-keyword">while</span> <span class="hljs-literal">true</span>; <span class="hljs-keyword">do</span><br>    dwm || <span class="hljs-built_in">exit</span><br><span class="hljs-keyword">done</span><br></code></pre></td></tr></table></figure>
+<p>https://wiki.archlinux.org/index.php/Dwm#Using_dbus_with_dwm</p>
 
                 
               </div>
@@ -646,7 +672,7 @@ Manager启动。我既然选择命令行界面，当然选择修改<code>~/.xini
   <div class="license-box my-3">
     <div class="license-title">
       <div>ubuntu_windowmanager</div>
-      <div>https://joelee-hit.gitee.io/2024/05/16/ubuntu-windowmanager/</div>
+      <div>https://joelee-hit.github.io/joelee-hit.github.io/2024/05/16/ubuntu-windowmanager/</div>
     </div>
     <div class="license-meta">
       
@@ -664,7 +690,7 @@ Manager启动。我既然选择命令行界面，当然选择修改<code>~/.xini
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年5月16日</div>
+          <div>2024年5月17日</div>
         </div>
       
       

@@ -19,33 +19,33 @@
     <meta name="description" content="自从将 ubuntu 22.04 作为我的主力系统以来，就在实践中遇到的问题进行总结和解答。（供参考） 装系统后先做 删除 snap 查看 snap 安装的应用： 1snap list 卸载 snap 安装的应用程序（ snap_delete_app.sh ），直到 snap list 不返回任何软件： 123for p in $(snap list | awk &amp;#x27;&amp;#123;print">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ubuntu主力系统日常记录">
-<meta property="og:url" content="https://joelee-hit.gitee.io/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:url" content="https://joelee-hit.github.io/joelee-hit.github.io/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/index.html">
 <meta property="og:site_name" content="joelee&#39;s blog">
 <meta property="og:description" content="自从将 ubuntu 22.04 作为我的主力系统以来，就在实践中遇到的问题进行总结和解答。（供参考） 装系统后先做 删除 snap 查看 snap 安装的应用： 1snap list 卸载 snap 安装的应用程序（ snap_delete_app.sh ），直到 snap list 不返回任何软件： 123for p in $(snap list | awk &amp;#x27;&amp;#123;print">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/re-linuxcore-1.png">
-<meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/image-20240316203317429.png">
-<meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/image-20240309092748084.png">
-<meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/image-20240309100436419.png">
-<meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/image-20240309100535607.png">
-<meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/9cd5cbe546614ed6a7627c3aa2a7c003.png">
-<meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/sw-ve-kdenlive.jpg">
-<meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/image-20231207213817907.png">
-<meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/sw-zotero-pdftk.png">
-<meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/sw-zotero-darkthemebug.png">
-<meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/op-screen-1.png">
-<meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/op-screen-2.png">
-<meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/op-output-to-pdf.png">
-<meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/op-rightclick-newfile.png">
-<meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/bug-fcitx.png">
-<meta property="og:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/bug-internal-error.png">
+<meta property="og:image" content="https://joelee-hit.github.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/re-linuxcore-1.png">
+<meta property="og:image" content="https://joelee-hit.github.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/image-20240316203317429.png">
+<meta property="og:image" content="https://joelee-hit.github.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/image-20240309092748084.png">
+<meta property="og:image" content="https://joelee-hit.github.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/image-20240309100436419.png">
+<meta property="og:image" content="https://joelee-hit.github.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/image-20240309100535607.png">
+<meta property="og:image" content="https://joelee-hit.github.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/9cd5cbe546614ed6a7627c3aa2a7c003.png">
+<meta property="og:image" content="https://joelee-hit.github.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/sw-ve-kdenlive.jpg">
+<meta property="og:image" content="https://joelee-hit.github.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/image-20231207213817907.png">
+<meta property="og:image" content="https://joelee-hit.github.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/sw-zotero-pdftk.png">
+<meta property="og:image" content="https://joelee-hit.github.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/sw-zotero-darkthemebug.png">
+<meta property="og:image" content="https://joelee-hit.github.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/op-screen-1.png">
+<meta property="og:image" content="https://joelee-hit.github.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/op-screen-2.png">
+<meta property="og:image" content="https://joelee-hit.github.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/op-output-to-pdf.png">
+<meta property="og:image" content="https://joelee-hit.github.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/op-rightclick-newfile.png">
+<meta property="og:image" content="https://joelee-hit.github.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/bug-fcitx.png">
+<meta property="og:image" content="https://joelee-hit.github.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/bug-internal-error.png">
 <meta property="article:published_time" content="2024-01-06T16:10:30.000Z">
 <meta property="article:modified_time" content="2024-05-14T12:53:05.270Z">
 <meta property="article:author" content="joelee">
 <meta property="article:tag" content="ubuntu">
 <meta property="article:tag" content="主力系统">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://joelee-hit.gitee.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/re-linuxcore-1.png">
+<meta name="twitter:image" content="https://joelee-hit.github.io/myblog/2024/01/07/ubuntu%E4%B8%BB%E5%8A%9B%E7%B3%BB%E7%BB%9F%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/re-linuxcore-1.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -89,7 +89,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"joelee-hit.gitee.io","root":"/myblog/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"UU4TJ0JQzDgf0er5h2RfW8ve-gzGzoHsz","app_key":"px4eIsDZQBJRxIUkt6PCJpNH","server_url":"https://uu4tj0jq.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/myblog/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"joelee-hit.github.io","root":"/myblog/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"UU4TJ0JQzDgf0er5h2RfW8ve-gzGzoHsz","app_key":"px4eIsDZQBJRxIUkt6PCJpNH","server_url":"https://uu4tj0jq.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":true}},"search_path":"/myblog/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -1244,7 +1244,7 @@ for it</p>
   <div class="license-box my-3">
     <div class="license-title">
       <div>ubuntu主力系统日常记录</div>
-      <div>https://joelee-hit.gitee.io/2024/01/07/ubuntu主力系统日常记录/</div>
+      <div>https://joelee-hit.github.io/joelee-hit.github.io/2024/01/07/ubuntu主力系统日常记录/</div>
     </div>
     <div class="license-meta">
       
