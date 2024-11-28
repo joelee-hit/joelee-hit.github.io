@@ -1,0 +1,10 @@
+[Unit]
+Description=Start PeerBanHelper Service
+
+[Service]
+ExecStart=/usr/bin/java -jar -Xmx512M -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+ShrinkHeapInSteps PeerBanHelper.jar nogui
+Type=simple
+WorkingDirectory=/home/joelee/.local/share/pbh
+
+[Install]
+WantedBy=default.target

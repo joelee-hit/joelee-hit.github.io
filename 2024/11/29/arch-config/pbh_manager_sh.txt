@@ -1,0 +1,127 @@
+#!/bin/sh
+#本脚本用于 Peerbanhelper 的日常维护
+
+export PBH_DIR=/home/joelee/.local/share/pbh
+#PeerBanHelper jar 文件的主目录
+export PBH_DIR_U=/home/joelee/Downloads
+#PeerBanHelper jar 新版本文件的默认存放路径
+
+LOG_FILE=/home/joelee/.local/share/pbh/data/logs/*.log.gz
+
+while true; do
+    printf -- '-%0.s' {1..100} && echo
+    printf 'You can use the PeerBanHelper maintenance script for:\n\n'
+    printf 'A - Set up systemd services\n'
+    printf 'B - Start systemd service\n'
+    printf 'C - Stop systemd service\n\n'
+    printf 'D - Update PeerBanHelper\n'
+    printf 'E - Degrade PeerBanHelper\n'
+    printf 'F - Delete unused jar and logs\n'
+    printf 'G - Read logs of PeerBanHelper\n\n'
+    printf 'H - Clear terminal output\n'
+    printf 'Q - Quit\n\n'
+    printf '==> '
+    read answer
+
+    if [ "$answer" = "A" ] || [ "$answer" = "a" ]; then
+    #注册服务
+        mkdir -p ~/.config/systemd/user
+        if [ -f $PBH_DIR/pbh.service ]; then
+            printf 'Found pbh.service file.\n'
+            cp $PBH_DIR/pbh.service ~/.config/systemd/user
+            systemctl daemon-reload --user
+            systemctl enable --user pbh
+            systemctl status --user pbh | grep "Loaded"
+            #注册 PeerBanHelper
+        else
+            printf 'ERROR: pbh.service not found!\n'
+        fi
+
+    elif [ "$answer" = "B" ] || [ "$answer" = "b" ]; then
+    #启动服务
+        systemctl start --user pbh
+        systemctl status --user pbh | grep "Active"
+
+    elif [ "$answer" = "C" ] || [ "$answer" = "c" ]; then
+    #关闭服务
+        systemctl stop --user pbh
+        systemctl status --user pbh | grep "Active"
+
+    elif [ "$answer" = "D" ] || [ "$answer" = "d" ]; then
+    #更新 Peerbanhelper
+        systemctl stop --user pbh
+        systemctl status --user pbh | grep "Active"
+        #服务中止
+        if [ -f $PBH_DIR_U/PeerBanHelper*.zip ]; then
+            cd $PBH_DIR_U
+            7z x PeerBanHelper*.zip
+            rm -r $PBH_DIR/libraries
+            printf 'Delete old libraries: OK!\n'
+            mv $PBH_DIR_U/PeerBanHelper/libraries $PBH_DIR
+            printf 'Update libraries: OK!\n'
+            #更新库
+            mv -f $PBH_DIR/PeerBanHelper.jar $PBH_DIR/PeerBanHelper.jar.old
+            printf 'Backup files: OK!\n'
+            mv $PBH_DIR_U/PeerBanHelper/PeerBanHelper.jar $PBH_DIR
+            printf 'Update files: OK!\n'
+            #更新 jar 文件
+            systemctl restart --user pbh
+            systemctl status --user pbh | grep "Active"
+            rm -r $PBH_DIR_U/PeerBanHelper
+        else
+            printf 'ERROR: PeerBanHelper*.zip not found!\n'
+        fi
+
+    elif [ "$answer" = "E" ] || [ "$answer" = "e" ]; then
+    #降级更新 Peerbanhelper
+        if [ -f $PBH_DIR/PeerBanHelper.jar.old ]; then
+            systemctl stop --user pbh
+            systemctl status --user pbh | grep "Active"
+            #服务中止
+            mv -f $PBH_DIR/PeerBanHelper.jar $PBH_DIR/PeerBanHelper.jar.error
+            mv -f $PBH_DIR/PeerBanHelper.jar.old $PBH_DIR/PeerBanHelper.jar
+            printf 'Downgrade: OK!\n'
+            #更换旧版文件
+            systemctl restart --user pbh
+            systemctl status --user pbh | grep "Active"
+        else
+            printf 'ERROR: PeerBanHelper.jar.old not found!\n'
+        fi
+
+    elif [ "$answer" = "F" ] || [ "$answer" = "f" ]; then
+    #删除有问题的旧版文件和日志
+        printf 'Start deleting files...\n'
+        rm $PBH_DIR/data/logs/*.log.gz
+        printf 'Remove archive logs: OK!\n'
+        if [ -f $PBH_DIR/PeerBanHelper.jar.error ]; then
+        #删除 PeerBanHelper.jar.error
+            rm $PBH_DIR/PeerBanHelper.jar.error
+            printf 'Remove PeerBanHelper.jar.error: OK!\n'
+        else
+            printf 'ERROR: PeerBanHelper.jar.error not found!\n'
+        fi
+
+    elif [ "$answer" = "G" ] || [ "$answer" = "g" ]; then
+    #读取 Peerbanhelper 日志
+        tail -n 30 $PBH_DIR/data/logs/latest.log
+        #读取最新的 30 条日志
+        #也可以使用：
+        #journalctl --user -u pbh
+
+    elif [ "$answer" = "H" ] || [ "$answer" = "h" ]; then
+    #清理并退出
+        clear
+
+    elif [ "$answer" = "Q" ] || [ "$answer" = "q" ]; then
+    #退出
+        echo "The script task has ended."
+        exit
+
+    else
+    #重新开始循环
+        echo "ERROR: Invalid input!"
+        continue
+
+    fi
+
+done
