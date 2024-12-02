@@ -295,38 +295,45 @@
             
               <div class="markdown-body">
                 
-                <h1 id="为什么选择archlinux">为什么选择archlinux</h1>
-<p>我曾经用了将近一年的Ubuntu
-22.04，她给我的感觉就是简单易用、适合新手，但是大版本迭代的问题导致只能使用较旧的软件包，比如Ubuntu
-22.04的内核版本大概是6.5左右，而截至2024年8月，内核版本即将更新到6.11。因此我更渴望滚动更新的archlinux，给我带来最新的特性和应用，并且它的“用户论坛”（AUR）是最活跃的linux用户群，里面充斥着大量的第三方应用。尽管在没使用前，我曾被她的“极难驾驭”所难倒，但我尝试了4、5次安装后发现，她给我的自由度真的很高，上了几次后就熟练了。</p>
-<p><br></p>
-<h1 id="参考链接">参考链接</h1>
+                <h1>为什么选择archlinux</h1>
+<p>我曾经用了将近一年的Ubuntu 22.04，她给我的感觉就是简单易用、适合新手，但是大版本迭代的问题导致只能使用较旧的软件包，比如Ubuntu 22.04的内核版本大概是6.5左右，而截至2024年8月，内核版本即将更新到6.11。因此我更渴望滚动更新的archlinux，给我带来最新的特性和应用，并且它的“用户论坛”（AUR）是最活跃的linux用户群，里面充斥着大量的第三方应用。尽管在没使用前，我曾被她的“极难驾驭”所难倒，但我尝试了4、5次安装后发现，她给我的自由度真的很高，上了几次后就熟练了。</p>
+<br>
+<h1>参考链接</h1>
 <p><a target="_blank" rel="noopener" href="https://arch.icekylin.online/">archlinux 简明指南</a></p>
 <blockquote>
 <p>UEFI+GPT+全新安装：采用三分区，<code>EFI系统分区（\boot）</code>、<code>交换分区（swap）</code>、<code>根分区（\）</code>。</p>
 <p>建议双系统也这么分区，不要将arch的grub和win的系统分区混在一起，一块硬盘有多个EFI分区也是没有问题的。</p>
 <p>如果在物理机上安装失败导致无法开机，还可以学习<code>winPE</code>（一种可以把自己装进内存的轻量win系统）来清楚所有分区，再重新安装，很简单的！</p>
 </blockquote>
-<p><br></p>
-<h1 id="安装">安装</h1>
+<br>
+<h1>安装</h1>
 <p>电脑情况：</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs powershell">OS: Windows <span class="hljs-number">11</span> (专业工作站版) x86_64<br>Host: T6AD (Standard)<br>Kernel: WIN32_NT <span class="hljs-number">10.0</span>.<span class="hljs-number">22631.4460</span> (<span class="hljs-number">23</span>H2)<br>Shell: Windows PowerShell <span class="hljs-number">5.1</span>.<span class="hljs-number">22621.4391</span><br>Terminal: Windows Terminal <span class="hljs-number">1.21</span>.<span class="hljs-number">3231.0</span><br>CPU: AMD Ryzen <span class="hljs-number">7</span> <span class="hljs-number">7435</span>HS (<span class="hljs-number">16</span>) <span class="hljs-selector-tag">@</span> <span class="hljs-number">4.55</span> GHz<br>GPU: NVIDIA GeForce RTX <span class="hljs-number">4060</span> Laptop GPU (<span class="hljs-number">7.77</span> GiB) [<span class="hljs-type">Discrete</span>]<br></code></pre></td></tr></table></figure>
-<p><br></p>
+<br>
 <h2 id="准备">准备</h2>
 <ul>
-<li><p>vim的基本操作</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash">:wq  <span class="hljs-comment"># w是写入文件，q是退出编辑</span><br>:q!  <span class="hljs-comment"># 不保存，强制退出</span><br>gg   <span class="hljs-comment"># 回到文首</span><br>G    <span class="hljs-comment"># 回到文末</span><br><span class="hljs-built_in">dd</span>   <span class="hljs-comment"># 剪切光标所在行</span><br>2dd  <span class="hljs-comment"># 剪切光标所在行和下一行</span><br>/xx  <span class="hljs-comment"># 搜索&quot;xx&quot;，n下一个，N上一个</span><br>?xx  <span class="hljs-comment"># 反向搜索</span><br></code></pre></td></tr></table></figure></li>
-<li><p>手机开热点，BIOS的无线网卡硬件开关处于打开状态</p></li>
-<li><p>在<a
-target="_blank" rel="noopener" href="https://archlinux.org/download/">官网</a>下载archlinux的ISO映像，准备一个至少2G的U盘，将ISO文件烧录进U盘。另外，还需要用PGP
-signature签名文件检查ISO的完整性和无误性。自己搜索校验的方法。</p></li>
-<li><p>最好提前准备winPE启动U盘，方便清除分区</p></li>
-<li><p>有至少48G的空闲空间</p></li>
-<li><p><a
-target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/System_time">设置window使用UTC时间</a></p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-comment"># 管理员</span><br>reg add <span class="hljs-string">&quot;HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation&quot;</span> /v RealTimeIsUniversal /d <span class="hljs-number">1</span> /t REG_DWORD /f<br></code></pre></td></tr></table></figure></li>
+<li>
+<p>vim的基本操作</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash">:wq  <span class="hljs-comment"># w是写入文件，q是退出编辑</span><br>:q!  <span class="hljs-comment"># 不保存，强制退出</span><br>gg   <span class="hljs-comment"># 回到文首</span><br>G    <span class="hljs-comment"># 回到文末</span><br><span class="hljs-built_in">dd</span>   <span class="hljs-comment"># 剪切光标所在行</span><br>2dd  <span class="hljs-comment"># 剪切光标所在行和下一行</span><br>/xx  <span class="hljs-comment"># 搜索&quot;xx&quot;，n下一个，N上一个</span><br>?xx  <span class="hljs-comment"># 反向搜索</span><br></code></pre></td></tr></table></figure>
+</li>
+<li>
+<p>手机开热点，BIOS的无线网卡硬件开关处于打开状态</p>
+</li>
+<li>
+<p>在<a target="_blank" rel="noopener" href="https://archlinux.org/download/">官网</a>下载archlinux的ISO映像，准备一个至少2G的U盘，将ISO文件烧录进U盘。另外，还需要用PGP signature签名文件检查ISO的完整性和无误性。自己搜索校验的方法。</p>
+</li>
+<li>
+<p>最好提前准备winPE启动U盘，方便清除分区</p>
+</li>
+<li>
+<p>有至少48G的空闲空间</p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/System_time">设置window使用UTC时间</a></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs powershell"><span class="hljs-comment"># 管理员</span><br>reg add <span class="hljs-string">&quot;HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation&quot;</span> /v RealTimeIsUniversal /d <span class="hljs-number">1</span> /t REG_DWORD /f<br></code></pre></td></tr></table></figure>
+</li>
 </ul>
-<p><br></p>
+<br>
 <h2 id="进入arch安装环境">进入arch安装环境</h2>
 <p>插入U盘，重启时狂按F2或F12，选择U盘启动，从而进入arch安装环境。</p>
 <h2 id="安装arch">安装arch</h2>
@@ -336,7 +343,7 @@ target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/System_tim
 <h2 id="桌面环境与应用">桌面环境与应用</h2>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 1. 更新系统</span><br>pacman -Syu<br><br><br><span class="hljs-comment"># 2. 配置root的默认编辑器</span><br>vim ~/.bash_profile  <span class="hljs-comment"># export EDITOR=&#x27;vim&#x27;</span><br><br><br><span class="hljs-comment"># 3. 新建用户,之后重启用新用户登录</span><br>useradd -m -G wheel -s /bin/zsh joelee<br>passwd joelee<br>EDITOR=<span class="hljs-string">&#x27;vim&#x27;</span> visudo  <span class="hljs-comment"># 取消%wheel ALL=(ALL:ALL) ALL的注释</span><br><br><br><span class="hljs-comment"># 4. 开启32位支持和archlinuxcn</span><br>vim /etc/pacman.conf<br><span class="hljs-comment"># 取消[multilib]一节中两行的注释</span><br><span class="hljs-comment"># 添加[archlinuxcn]：</span><br><span class="hljs-comment"># [archlinuxcn]</span><br><span class="hljs-comment"># Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch</span><br>pacman -Syyu  <span class="hljs-comment"># 强制刷新数据库</span><br><br><span class="hljs-comment"># 提示GPG证书错误</span><br>pacman -S archlinux-keyring<br><br><br><span class="hljs-comment"># 5. 安装KDE-plasma</span><br>pacman -S plasma-meta kitty thunar<br><span class="hljs-comment"># 选择noto-fonts, ffmpeg, vlc</span><br><br><br><span class="hljs-comment"># 6. 启动sddm启动显示管理器</span><br>systemctl <span class="hljs-built_in">enable</span> --now sddm  <span class="hljs-comment"># 注意选择Xorg协议登录用户而不是Wayland</span><br><br><br><span class="hljs-comment"># 7. zsh做好常用应用</span><br><span class="hljs-built_in">sudo</span> pacman -S paru<br>paru -S sof-firmware alsa-firmware alsa-ucm-conf<br>paru -S noto-fonts-cjk noto-fonts-emoji noto-fonts-extra  <span class="hljs-comment"># 谷歌开源字体及表情</span><br>paru -S ark<br>paru -S gwenview<br>paru -S git wget<br>paru -S microsoft-edge-stable-bin<br>paru -S archlinux-keyring<br>paru -S archlinuxcn-keyring<br>paru -S bluez bluez-utils<br><span class="hljs-built_in">sudo</span> modprobe btusb<br><span class="hljs-built_in">sudo</span> systemctl <span class="hljs-built_in">enable</span> --now bluetooth.service<br><br><br><span class="hljs-comment"># 8. 检查家目录</span><br><span class="hljs-built_in">cd</span> ~<br><span class="hljs-built_in">ls</span> -hl<br>xdg-user-dirs-update<br><br><br><span class="hljs-comment"># 9. 非root用户的默认编辑器</span><br>vim ~/.zshrc  <span class="hljs-comment"># 添加export EDITOR=&#x27;vim&#x27;</span><br><br><br><span class="hljs-comment"># 10. v2rayn</span><br>paru -S v2rayn-bin<br><span class="hljs-comment"># 配置v2rayn,因为下面输入法的各种词库要用代理</span><br><br><br><span class="hljs-comment"># 11. 输入法改用pinyin,不用雾凇输入法</span><br><span class="hljs-comment"># https://www.debuggerx.com/2023/09/20/fcitx5-customizer/</span><br>paru -S fcitx5-im fcitx5-chinese-addons <br><br>vim ~/.config/environment.d/im.conf<br><span class="hljs-comment"># 加入以下内容</span><br><span class="hljs-comment"># fix fcitx problem</span><br>GTK_IM_MODULE=fcitx<br>QT_IM_MODULE=fcitx<br>XMODIFIERS=@im=fcitx<br><span class="hljs-comment"># INPUT_METHOD=fcitx</span><br>SDL_IM_MODULE=fcitx<br>GLFW_IM_MODULE=ibus<br><br>wget https://www.debuggerx.com/fcitx5_customizer/fcitx5_customizer.sh<br>sh fcitx5_customizer.sh<br></code></pre></td></tr></table></figure>
 <h2 id="nvidia驱动">nvidia驱动</h2>
-<p>https://wiki.archlinuxcn.org/wiki/NVIDIA</p>
+<p><a target="_blank" rel="noopener" href="https://wiki.archlinuxcn.org/wiki/NVIDIA">https://wiki.archlinuxcn.org/wiki/NVIDIA</a></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S nvidia  <span class="hljs-comment"># 4060</span><br>paru -S nvidia-settings nvidia-utils lib32-nvidia-utils<br></code></pre></td></tr></table></figure>
 
                 

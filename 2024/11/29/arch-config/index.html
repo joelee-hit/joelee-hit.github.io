@@ -26,11 +26,13 @@
 <meta property="og:site_name" content="JoeLee&#39;s NoteBook">
 <meta property="og:description" content="archlinux 系统配置 终端 zsh美化 安装 ttf-meslo-nerd-font-powerlevel10k 字体： 1paru -S ttf-meslo-nerd-font-powerlevel10k  # 我试过好像不用 安装 powerlevel10k： 1234git clone --depth&#x3D;1 https:&#x2F;&#x2F;gitee.com&#x2F;romkatv&#x2F;powerlevel10k">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-11-28T16:01:58.275Z">
-<meta property="article:modified_time" content="2024-11-28T16:12:34.164Z">
+<meta property="og:image" content="https://joelee-hit.github.io/2024/11/29/arch-config/image-20241130012823193.png">
+<meta property="article:published_time" content="2024-11-29T12:16:03.990Z">
+<meta property="article:modified_time" content="2024-12-02T12:17:35.463Z">
 <meta property="article:author" content="joelee">
 <meta property="article:tag" content="archlinux">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://joelee-hit.github.io/2024/11/29/arch-config/image-20241130012823193.png">
   
   
   
@@ -220,8 +222,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-11-29 00:01" pubdate>
-          2024年11月29日 凌晨
+        <time datetime="2024-11-29 20:16" pubdate>
+          2024年11月29日 晚上
         </time>
       </span>
     
@@ -232,7 +234,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.5k 字
+          2.7k 字
         
       </span>
     
@@ -243,7 +245,7 @@
         
         
         
-          13 分钟
+          23 分钟
         
       </span>
     
@@ -285,7 +287,7 @@
               <p id="updated-time" class="note note-info" style="">
                 
                   
-                    本文最后更新于 2024年11月29日 凌晨
+                    本文最后更新于 2024年12月2日 晚上
                   
                 
               </p>
@@ -293,7 +295,7 @@
             
               <div class="markdown-body">
                 
-                <h1 id="archlinux-系统配置">archlinux 系统配置</h1>
+                <h1>archlinux 系统配置</h1>
 <h2 id="终端">终端</h2>
 <h3 id="zsh美化">zsh美化</h3>
 <p>安装 ttf-meslo-nerd-font-powerlevel10k 字体：</p>
@@ -301,115 +303,174 @@
 <p>安装 powerlevel10k：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> --depth=1 https://gitee.com/romkatv/powerlevel10k.git ~/.config/powerlevel10k<br><span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;source ~/.config/powerlevel10k/powerlevel10k.zsh-theme&#x27;</span> &gt;&gt;~/.zshrc<br><span class="hljs-comment"># 配置主题</span><br>p10k configure<br></code></pre></td></tr></table></figure>
 <blockquote>
-<p>教程：<a
-target="_blank" rel="noopener" href="https://github.com/romkatv/powerlevel10k">romkatv/powerlevel10k: A
-Zsh theme</a></p>
+<p>教程：<a target="_blank" rel="noopener" href="https://github.com/romkatv/powerlevel10k">romkatv/powerlevel10k: A Zsh theme</a></p>
 </blockquote>
-<p><br></p>
+<br>
 <h2 id="字体">字体</h2>
 <p>Fontconfig配置（~/.config/fontconfig/fonts.conf）：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-meta">&lt;?xml version=<span class="hljs-string">&quot;1.0&quot;</span>?&gt;</span><br><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">fontconfig</span> <span class="hljs-keyword">SYSTEM</span> <span class="hljs-string">&quot;fonts.dtd&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">fontconfig</span>&gt;</span><br><br>  <span class="hljs-comment">&lt;!-- 显示器使用的像素排列方式. 现代显示器基本都是用rgb排列. --&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">match</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;font&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">edit</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;assign&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;rgba&quot;</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">const</span>&gt;</span>rgb<span class="hljs-tag">&lt;/<span class="hljs-name">const</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">edit</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">match</span>&gt;</span><br><br>  <span class="hljs-comment">&lt;!-- 字体微调的程度, 可选为 hintnone, hintslight (默认), hintmedium, hintfull. --&gt;</span><br>  <span class="hljs-comment">&lt;!-- 简单来说，更高的 hinting 等级可以使字体更锐利，但同时也会损失更多的细节. --&gt;</span><br>  <span class="hljs-comment">&lt;!-- 如果你的显示器的 DPI 高得不像话 (&gt;=300), 那么就可以关闭 hinting, 因为字体会自然对齐像素. --&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">match</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;font&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">edit</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;assign&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;hintstyle&quot;</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">const</span>&gt;</span>hintslight<span class="hljs-tag">&lt;/<span class="hljs-name">const</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">edit</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">match</span>&gt;</span><br><br>  <span class="hljs-comment">&lt;!-- 抗锯齿. 除非你的屏幕DPI奇高否则建议开启. --&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">match</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;font&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">edit</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;assign&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;antialias&quot;</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">bool</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">bool</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">edit</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">match</span>&gt;</span><br>  <br>  <span class="hljs-comment">&lt;!-- 关于lcdfilter, 因为我们在使用 FreeType2 自带的 Harmony 子像素渲染, 应该是不需要设置的. --&gt;</span><br><br>  <span class="hljs-comment">&lt;!-- 全局默认中文字体 --&gt;</span><br>  <span class="hljs-comment">&lt;!-- Default font for the zh_CN locale (no fc-match pattern) --&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">match</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">test</span> <span class="hljs-attr">compare</span>=<span class="hljs-string">&quot;contains&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;lang&quot;</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">string</span>&gt;</span>zh_CN<span class="hljs-tag">&lt;/<span class="hljs-name">string</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">test</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">edit</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;prepend&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;family&quot;</span>&gt;</span><br>      <span class="hljs-comment">&lt;!-- 更改下一行即可, 以下同理 --&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">string</span>&gt;</span>Noto Sans CJK SC<span class="hljs-tag">&lt;/<span class="hljs-name">string</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">edit</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">match</span>&gt;</span><br><br>  <span class="hljs-comment">&lt;!-- Fallback fonts preference order --&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">alias</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>sans-serif<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">prefer</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>Noto Sans CJK SC<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>Noto Sans CJK TC<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>Noto Sans CJK JP<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>Noto Sans CJK KR<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>Noto Color Emoji<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">prefer</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">alias</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">alias</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>serif<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">prefer</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>Noto Serif<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>Noto Serif CJK SC<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>Noto Serif CJK TC<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>Noto Serif CJK JP<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>Noto Serif CJK KR<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">family</span>&gt;</span>Noto Color Emoji<span class="hljs-tag">&lt;/<span class="hljs-name">family</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">prefer</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">alias</span>&gt;</span><br><br><br>  <span class="hljs-comment">&lt;!-- 将 Liberation 系列对应到我们定义的优先字体上 --&gt;</span><br>  <span class="hljs-comment">&lt;!-- Map fonts that are commonly used by web pages to our preferred fonts --&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">match</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;pattern&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">test</span> <span class="hljs-attr">qual</span>=<span class="hljs-string">&quot;any&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;family&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">string</span>&gt;</span>Liberation Sans<span class="hljs-tag">&lt;/<span class="hljs-name">string</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">test</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">edit</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;family&quot;</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;assign&quot;</span> <span class="hljs-attr">binding</span>=<span class="hljs-string">&quot;same&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">string</span>&gt;</span>sans-serif<span class="hljs-tag">&lt;/<span class="hljs-name">string</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">edit</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">match</span>&gt;</span><br>  <br>  <span class="hljs-tag">&lt;<span class="hljs-name">match</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;pattern&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">test</span> <span class="hljs-attr">qual</span>=<span class="hljs-string">&quot;any&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;family&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">string</span>&gt;</span>Liberation Mono<span class="hljs-tag">&lt;/<span class="hljs-name">string</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">test</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">edit</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;family&quot;</span> <span class="hljs-attr">mode</span>=<span class="hljs-string">&quot;assign&quot;</span> <span class="hljs-attr">binding</span>=<span class="hljs-string">&quot;same&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">string</span>&gt;</span>monospace<span class="hljs-tag">&lt;/<span class="hljs-name">string</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">edit</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">match</span>&gt;</span><br><br>  <span class="hljs-tag">&lt;<span class="hljs-name">selectfont</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">rejectfont</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">pattern</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">patelt</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;family&quot;</span> &gt;</span><br>          <span class="hljs-comment">&lt;!-- This font is causing problem with GitHub --&gt;</span><br>          <span class="hljs-tag">&lt;<span class="hljs-name">string</span>&gt;</span>Nimbus Sans<span class="hljs-tag">&lt;/<span class="hljs-name">string</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">patelt</span>&gt;</span><br>      <span class="hljs-tag">&lt;/<span class="hljs-name">pattern</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">rejectfont</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">selectfont</span>&gt;</span><br>  <br><span class="hljs-tag">&lt;/<span class="hljs-name">fontconfig</span>&gt;</span><br></code></pre></td></tr></table></figure>
 <blockquote>
-<p>教程：<a
-target="_blank" rel="noopener" href="https://szclsya.me/zh-cn/posts/fonts/linux-config-guide/">Linux
-下的字体调校指南 - Leo's Field</a></p>
+<p>教程：<a target="_blank" rel="noopener" href="https://szclsya.me/zh-cn/posts/fonts/linux-config-guide/">Linux 下的字体调校指南 - Leo’s Field</a></p>
 </blockquote>
-<p><br></p>
+<br>
 <h2 id="常用应用">常用应用</h2>
 <h3 id="微信">微信</h3>
 <p>现在的微信4.0很好用了，</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S wechat-universal-bwrap<br></code></pre></td></tr></table></figure>
 <p>配置：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">wechat-universal --<span class="hljs-built_in">help</span><br><br><span class="hljs-comment"># 修改 ~/.config/wechat-universal/binds.list, 增加如下内容</span><br>/run/media/joelee<br>/home/joelee<br></code></pre></td></tr></table></figure>
-<p><br></p>
+<br>
 <h3 id="qq">qq</h3>
 <p>qq现在统一架构，linux下用得舒舒服服，</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S linuxqq<br></code></pre></td></tr></table></figure>
-<p><br></p>
+<br>
 <h3 id="vscode">vscode</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S visual-studio-code-bin<br></code></pre></td></tr></table></figure>
-<p><br></p>
+<br>
 <h3 id="todesk">todesk</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S todesk-bin<br></code></pre></td></tr></table></figure>
-<p><br></p>
+<br>
 <h3 id="nutstore">nutstore</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S nutstore<br></code></pre></td></tr></table></figure>
-<p>首次打开软件，global sync
-path虽然给了更改选项，但实际上也改不了；但是可以先取消每个要sync的文件夹的目录，不然nutstore会默认同步在
-~/Nutstore Files 。</p>
-<p>为了防止 thunar 展示难看的 Nutstore Files 文件夹，可以在 ~/.hidden
-下添加文件夹的名字，这样打开thunar 就不会看见该文件夹了。</p>
-<p><br></p>
+<p>首次打开软件，global sync path虽然给了更改选项，但实际上也改不了；但是可以先取消每个要sync的文件夹的目录，不然nutstore会默认同步在 ~/Nutstore Files 。</p>
+<p>为了防止 thunar 展示难看的 Nutstore Files 文件夹，可以在 ~/.hidden 下添加文件夹的名字，这样打开thunar 就不会看见该文件夹了。</p>
+<br>
 <h3 id="zotero-jdk-pdftk">zotero (jdk, pdftk)</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># jdk23 pdftk 茉莉花插件</span><br>paru -S jdk-openjdk pdftk  <span class="hljs-comment"># 496.67MB</span><br><span class="hljs-comment"># zotero</span><br>paru -S zotero-bin<br></code></pre></td></tr></table></figure>
-<p><br></p>
+<br>
 <h3 id="wps">wps</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S wps-office-cn wps-office-mui-zh-cn<br></code></pre></td></tr></table></figure>
 <p>首次打开提示：</p>
 <ul>
-<li>system dpi is asymmetric, WPS Office may have display issues.
-据说是因为WPS字体的问题，安装 win
-的字体后就好了。。。但我不太理解。</li>
-<li>缺失公式符号字体，例如 Symbol, Wingdings, Wingdings2, Wingdings3,
-Webdings, MT Extra</li>
+<li>system dpi is asymmetric, WPS Office may have display issues. 据说是因为WPS字体的问题，安装 win 的字体后就好了。。。但我不太理解。</li>
+<li>缺失公式符号字体，例如 Symbol, Wingdings, Wingdings2, Wingdings3, Webdings, MT Extra</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 新罗马</span><br>paru -S ttf-times-new-roman<br><br><span class="hljs-comment"># 字体文件 https://www.alipan.com/s/iwAqcvcU7vr 提取码: mwB2</span><br><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">cp</span> -r custom /usr/share/fonts <br><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">chmod</span> 644 /usr/share/fonts/custom/*<br><span class="hljs-built_in">sudo</span> fc-cache -fsv<br><br><span class="hljs-comment"># 中文界面,删除其他语言的,就会应用中文了</span><br><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">rm</span> -rf /usr/lib/office6/mui/&#123;en_US,mn_CN,ru_RU,ug_CN&#125;<br></code></pre></td></tr></table></figure>
-<p><br></p>
+<br>
 <h3 id="nodejs-nvm">nodejs (nvm)</h3>
 <p>使用nvm管理node环境</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S nvm<br><br><span class="hljs-comment"># 换源</span><br>vim ~/.zshrc<br><span class="hljs-built_in">export</span> NVM_NODEJS_ORG_MIRROR=<span class="hljs-string">&quot;https://npmmirror.com/mirrors/node&quot;</span><br><span class="hljs-built_in">export</span> NVM_IOJS_ORG_MIRROR=<span class="hljs-string">&quot;https://npmmirror.com/mirrors/npm&quot;</span><br><span class="hljs-built_in">source</span> /usr/share/nvm/init-nvm.sh<br><br><br><span class="hljs-comment"># install node.js </span><br>nvm install --lts<br>nvm install node<br><span class="hljs-comment"># activate </span><br>nvm use v22.11.0<br><br><span class="hljs-comment"># 其他命令</span><br>nvm -v<br>nvm ls-remote<br>nvm uninstall nodejs版本号  <span class="hljs-comment"># 在此之前 nvm deactivate</span><br>nvm <span class="hljs-built_in">ls</span><br>nvm use node <span class="hljs-comment"># 切换到最新版</span><br></code></pre></td></tr></table></figure>
-<p><br></p>
+<br>
 <h3 id="pandoc">pandoc</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S pandoc-bin<br></code></pre></td></tr></table></figure>
-<p><br></p>
+<br>
 <h3 id="typora">typora</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S typora<br></code></pre></td></tr></table></figure>
-<p><br></p>
+<br>
 <h3 id="miniforge">miniforge</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S miniforge<br>mamba init zsh<br>conda config --<span class="hljs-built_in">set</span> auto_activate_base <span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
-<p><br></p>
+<br>
 <h3 id="rdp服务器">rdp服务器</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S xrdp  <span class="hljs-comment"># 前端</span><br>paru -S xorgxrdp-glamor  <span class="hljs-comment"># 后端</span><br>paru -S  pipewire-module-xrdp  <span class="hljs-comment"># 声音</span><br><br><span class="hljs-built_in">sudo</span> vim /etc/X11/Xwrapper.config  <br><span class="hljs-comment"># 写入</span><br>allowed_users=anybody<br>needs_root_rights=no<br><br><br>paru -S xorg-xinit<br><span class="hljs-built_in">cp</span> /etc/X11/xinit/xinitrc ~/.xinitrc<br>vim ~/.xinitrc<br><span class="hljs-comment"># 注释后5行语句，然后写入</span><br><span class="hljs-built_in">export</span> DESKTOP_SESSION=plasma<br><span class="hljs-built_in">exec</span> startplasma-x11  <span class="hljs-comment"># 加上exec后xorg桌面会话结束后退出当前用户</span><br><br><br><span class="hljs-built_in">sudo</span> systemctl <span class="hljs-built_in">enable</span> xrdp.service<br><span class="hljs-built_in">sudo</span> systemctl <span class="hljs-built_in">enable</span> xrdp-sesman.service<br><br><span class="hljs-comment"># 用 remmina 做localhost的rdp连接</span><br><span class="hljs-comment"># 但是没成功。。。</span><br></code></pre></td></tr></table></figure>
 <blockquote>
-<p>教程：https://dalsidealland.com/2024/07/30/debug/arch%20Linux%20%E5%AE%89%E8%A3%85%20RDP%20%E7%BB%88%E6%9E%81%E6%95%99%E7%A8%8B/</p>
+<p>教程：<a target="_blank" rel="noopener" href="https://dalsidealland.com/2024/07/30/debug/arch%20Linux%20%E5%AE%89%E8%A3%85%20RDP%20%E7%BB%88%E6%9E%81%E6%95%99%E7%A8%8B/">https://dalsidealland.com/2024/07/30/debug/arch Linux 安装 RDP 终极教程/</a></p>
 </blockquote>
 <p>thinclient_drivers文件夹问题：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> vim /etc/xrdp/sesman.ini<br><span class="hljs-comment"># 修改为 FuseMountName=/home/joelee/.xrdp/thinclient_drives</span><br><span class="hljs-built_in">mkdir</span> -p ~/.xrdp/thinclient_drives<br><span class="hljs-built_in">sudo</span> systemctl restart xrdp xrdp-sesman<br></code></pre></td></tr></table></figure>
-<p><br></p>
+<br>
 <h3 id="rdp客户端">rdp客户端</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S  remmina  freerdp<br></code></pre></td></tr></table></figure>
-<p><br></p>
+<br>
 <h3 id="sddm自动登录">sddm自动登录</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-variable">$USER</span>  <span class="hljs-comment"># joelee</span><br><span class="hljs-built_in">ls</span> -l /usr/share/xsessions/  <span class="hljs-comment"># plasmax11.desktop</span><br><br><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">mkdir</span> /etc/sddm.conf.d/<br><span class="hljs-built_in">sudo</span> vim /etc/sddm.conf.d/autologin.conf<br><span class="hljs-comment"># 写入</span><br>[Autologin]<br>User=joelee<br>Session=plasmax11<br></code></pre></td></tr></table></figure>
-<p><br></p>
+<br>
 <h3 id="openssh">openssh</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S openssh<br><span class="hljs-comment"># sshd.service</span><br></code></pre></td></tr></table></figure>
-<p><br></p>
+<br>
 <h3 id="masterpdf">masterpdf</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S masterpdfeditor-free<br></code></pre></td></tr></table></figure>
-<p><br></p>
+<br>
 <h3 id="wemeet">wemeet</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S wemeet-bin<br></code></pre></td></tr></table></figure>
-<p><br></p>
+<br>
 <h3 id="blueman-蓝牙设置增强">blueman (蓝牙设置增强)</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S blueman<br></code></pre></td></tr></table></figure>
-<p><br></p>
-<h3 id="qbittorrent-enhanced-peerbanhelper">qbittorrent-enhanced
-(peerbanhelper)</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S qbittorrent-enhanced<br><span class="hljs-comment"># qbee 开启WebUI, 根据后面给出的链接</span><br><br><br><span class="hljs-comment"># peerbanhelper</span><br>paru -S p7zip<br><span class="hljs-built_in">mkdir</span> -p ~/.local/share/pbh<br><span class="hljs-built_in">cd</span> ~/Downloads<br>wget https://github.com/PBH-BTN/PeerBanHelper/releases/download/v7.1.5/PeerBanHelper_7.1.5.zip<br><br><span class="hljs-built_in">cd</span> ~/.local/share/pbh<br><span class="hljs-comment"># https://github.com/PBH-BTN/PeerBanHelper/discussions/475 </span><br><span class="hljs-comment"># 复制管理脚本到 pbh_manager.sh</span><br>pbh_manager.sh  <span class="hljs-comment"># 进行文件的复制和服务的建立</span><br><span class="hljs-comment"># 复制服务文件到 pbh.service</span><br><span class="hljs-comment"># 复制测试脚本到 test-start.sh</span><br>./test-start.sh<br><span class="hljs-comment"># 打开 http://localhost:9898</span><br><span class="hljs-comment"># 设置一个token,比如 aa-bb-cc-dd-ee-ff</span><br><span class="hljs-comment"># 添加下载器 类型：“qbee”，地址：“之前qbee的WebUI的地址”</span><br><span class="hljs-comment">#                      用户名和密码是“之前qbee的WebUI的用户名和地址”</span><br><span class="hljs-comment">#                      其他默认</span><br><br><br><span class="hljs-comment"># .zshrc</span><br><span class="hljs-built_in">alias</span> peerbanhelper=<span class="hljs-string">&quot;cd ~/.local/share/pbh &amp;&amp; ./test-start.sh&quot;</span><br></code></pre></td></tr></table></figure>
-<p><a
-target="_blank" rel="noopener" href="https://pbh-btn.github.io/pbh-docs/docs/downloader/qBittorrent">qBittorrent
-| PeerBanHelper</a></p>
-<p><a
-target="_blank" rel="noopener" href="https://trackerslist.com/#/">XIU2/TrackersListCollection</a></p>
+<br>
+<h3 id="qbittorrent-enhanced-peerbanhelper">qbittorrent-enhanced (peerbanhelper)</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S qbittorrent-enhanced<br><span class="hljs-comment"># qbee 开启WebUI, 根据后面给出的链接</span><br><br><br><span class="hljs-comment"># peerbanhelper</span><br>paru -S p7zip<br><span class="hljs-built_in">mkdir</span> -p ~/.local/share/pbh<br><span class="hljs-built_in">cd</span> ~/Downloads<br>wget https://github.com/PBH-BTN/PeerBanHelper/releases/download/v7.1.5/PeerBanHelper_7.1.5.zip<br><br><span class="hljs-built_in">cd</span> ~/.local/share/pbh<br><span class="hljs-comment"># https://github.com/PBH-BTN/PeerBanHelper/discussions/475 </span><br><span class="hljs-comment"># 复制管理脚本到 pbh_manager.sh</span><br><span class="hljs-comment"># 复制服务文件到 pbh.service</span><br><span class="hljs-comment"># 复制测试脚本到 test-start.sh</span><br>pbh_manager.sh  <span class="hljs-comment"># 进行文件的复制和服务的建立</span><br>./test-start.sh<br><span class="hljs-comment"># 打开 http://localhost:9898</span><br><span class="hljs-comment"># 设置一个token,比如 aa-bb-cc-dd-ee-ff</span><br><span class="hljs-comment"># 添加下载器 类型：“qbee”，地址：“之前qbee的WebUI的地址”</span><br><span class="hljs-comment">#                      用户名和密码是“之前qbee的WebUI的用户名和地址”</span><br><span class="hljs-comment">#                      其他默认</span><br><br><br><span class="hljs-comment"># .zshrc</span><br><span class="hljs-built_in">alias</span> peerbanhelper=<span class="hljs-string">&quot;cd ~/.local/share/pbh &amp;&amp; ./test-start.sh&quot;</span><br></code></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://pbh-btn.github.io/pbh-docs/docs/downloader/qBittorrent">qBittorrent | PeerBanHelper</a></p>
+<p><a target="_blank" rel="noopener" href="https://trackerslist.com/#/">XIU2/TrackersListCollection</a></p>
 <p><a href="pbh_manager_sh.txt">pbh_manager.sh</a></p>
 <p><a href="pbh_service.txt">pbh.service</a></p>
 <p><a href="test-start_sh.txt">test-start.sh</a></p>
+<br>
+<h3 id="xbyyunpan-ffmpeg-aria2">xbyyunpan (ffmpeg,aria2)</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S electron21-bin<br>paru -S xbyyunpan-bin  <span class="hljs-comment"># 等待时间很长</span><br><br>paru -S ffmpeg<br><br><span class="hljs-comment"># 解决“Aira2已断开”问题</span><br>paru -S aria2<br><span class="hljs-built_in">cd</span> /usr/lib/xbyyunpan/engine/<br><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">mv</span> aria2c aria2c_bak<br><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">ln</span> -s /usr/bin/aria2c<br></code></pre></td></tr></table></figure>
+<bt>
+<h3 id="HP打印机">HP打印机</h3>
+<p>HP linux 开源驱动对办公室里的打印机的支持如下，</p>
+<img src="/2024/11/29/arch-config/image-20241130012823193.png" srcset="/img/loading.gif" lazyload class="" title="image-20241130012823193">
+<p>按照 ArchWiki 的 <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/CUPS">CUPS 页面</a>进行相关配置，CUPS 是苹果公司开源的打印系统，是目前 Linux 下最主流的打印方案。 <strong>安装 CUPS</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S cups cups-pdf<br><br><span class="hljs-comment"># 法1 利用 cups 的Web界面管理</span><br>systemctl <span class="hljs-built_in">enable</span> cups.service --now  <span class="hljs-comment"># http://localhost:631</span><br><span class="hljs-comment"># 法2 利用 KDE 桌面的软件包</span><br>paru -S print-manager system-config-printer<br>systemctl <span class="hljs-built_in">enable</span> cups.socket<br></code></pre></td></tr></table></figure>
+<p><strong>安装驱动</strong>：OpenPrinting 维护的 <strong>foomatic</strong> 为很大一部分打印机提供的驱动文件，Gutenprint 维护的 gutenprint 包也包含了佳能(Canon)、爱普生(Epson)、利盟(Lexmark)、索尼(Sony)、奥林巴斯(Olympus) 以及 PCL 打印机的驱动程序。具体的安装方法同样可以在 ArchWiki 的 <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/CUPS">CUPS 页面</a>找到。</p>
+<blockquote>
+<p>观察别人寻找驱动的过程：但 HP Laser 103w 的驱动程序都不在这些软件包中，在 HP 的官网我们可以找到<a target="_blank" rel="noopener" href="https://support.hp.com/cn-zh/drivers/hp-laser-100-printer-series/model/2100769190">这个页面</a>，包含了 HP Laser 103w 的 Linux 驱动<a target="_blank" rel="noopener" href="https://ftp.hp.com/pub/softlib/software13/printers/CLP150/uld-hp_V1.00.39.12_00.15.tar.gz">下载地址</a>（已在 <a target="_blank" rel="noopener" href="http://web.archive.org">web.archive.org</a> 存档）。通过下载下来的文件名，我们可以看见名字为 uld-hp，理论上可以直接通过压缩包内的安装脚本进行安装，但我通过这个名字顺藤摸瓜，找到了 <a target="_blank" rel="noopener" href="https://aur.archlinux.org/packages/hpuld">AUR/hpuld</a> 可以直接进行安装。</p>
+</blockquote>
+<p>我在 <a target="_blank" rel="noopener" href="https://developers.hp.com/hp-linux-imaging-and-printing">HPLIP</a> 官方网址上找到办公室的打印机型号，得知 HPLIP 是支持其的，因此，</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S hplip<br><br>Optional dependencies <span class="hljs-keyword">for</span> hplip<br>    cups: <span class="hljs-keyword">for</span> printing support [installed]<br>    sane: <span class="hljs-keyword">for</span> scanner support [installed]<br>    python-pillow: <span class="hljs-keyword">for</span> commandline scanning support<br>    python-reportlab: <span class="hljs-keyword">for</span> pdf output <span class="hljs-keyword">in</span> hp-scan<br>    rpcbind: <span class="hljs-keyword">for</span> network support<br>    python-pyqt5: <span class="hljs-keyword">for</span> running GUI and hp-toolbox<br>    libusb: <span class="hljs-keyword">for</span> advanced usb support [installed]<br>    wget: <span class="hljs-keyword">for</span> network support [installed]<br></code></pre></td></tr></table></figure>
+<p>各种类型：</p>
+<ol>
+<li><strong>Manual Config（手动配置）</strong>：用户需要手动输入打印机的详细信息，如IP地址、端口号等，来配置打印机连接。</li>
+<li><strong>IPP (ipp)</strong>：IPP（Internet Printing Protocol，互联网打印协议）是一种网络打印协议，允许用户通过网络连接打印机。ipp选项通常用于通过HTTP协议进行网络打印。</li>
+<li><strong>IPP (https)</strong>：与IPP类似，但使用HTTPS协议，提供更安全的网络打印服务。</li>
+<li><strong>IPP (ipps)</strong>：这是IPP协议的扩展，使用SSL/TLS加密，提供更安全的网络打印服务。</li>
+<li><strong>AppSocket/HP JetDirect</strong>：AppSocket是一种由HP开发的打印机协议，主要用于HP打印机。HP JetDirect是HP的一种网络打印解决方案，允许打印机直接连接到网络。</li>
+<li><strong>LPD/LPR Host or Printer</strong>：LPD（Line Printer Daemon，行式打印机守护进程）和LPR（Line Printer Requester，行式打印机请求器）是Unix/Linux系统中常用的网络打印协议。LPD用于管理打印队列，LPR用于发送打印请求。</li>
+<li><strong>Windows Printer via SAMBA</strong>：通过Samba服务连接Windows打印机。Samba是一种允许Unix/Linux系统与Windows系统共享文件和打印机的软件。</li>
+</ol>
+<blockquote>
+<p>参考链接：<a target="_blank" rel="noopener" href="https://zhul.in/2024/07/14/config-hp-laser-103w-printer-for-archlinux/">HP Laser 103w 打印机</a>  <a target="_blank" rel="noopener" href="https://zhul.in/2024/07/14/config-hp-laser-103w-printer-for-archlinux/">HP linux 驱动支持列表</a>  <a target="_blank" rel="noopener" href="https://support.hp.com/us-en/product/details/hp-color-laserjet-pro-m280-m281-multifunction-printer-series/model/14142491">HP M281 fdw</a></p>
+</blockquote>
+<br>
+<h3 id="贴图-slop-miam-viewnior">贴图 (slop,miam,viewnior)</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S xdotool miam viewnior<br>paru -S gnome-themes-extra  <span class="hljs-comment"># 解决 viewnior 无法加载 adwaita 主题引擎</span><br>paru -S lxappearance  <span class="hljs-comment"># 调整 gtk 应用的主题等元素</span><br>paru -S materia-gtk-theme gtk-engine-murrine arc-gtk-theme arc-icon-theme <br></code></pre></td></tr></table></figure>
+<p>贴图脚本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/bash</span><br><br><span class="hljs-comment"># 位于 ~/.local/share/pinpic/pinpic.sh</span><br><br>rect=$(slop -f <span class="hljs-string">&quot;%x %y %w %h&quot;</span>)<br><br>tmp_file=$(<span class="hljs-built_in">echo</span> /tmp/$(<span class="hljs-built_in">date</span> +<span class="hljs-string">&quot;%Y_%m_%d_%H_%M_%S&quot;</span>).png)<br><span class="hljs-built_in">echo</span> <span class="hljs-variable">$tmp_file</span><br><br>pos_x=$(<span class="hljs-built_in">echo</span> <span class="hljs-variable">$rect</span> | awk <span class="hljs-string">&#x27;&#123;print $1&#125;&#x27;</span>)<br>pos_y=$(<span class="hljs-built_in">echo</span> <span class="hljs-variable">$rect</span> | awk <span class="hljs-string">&#x27;&#123;print $2&#125;&#x27;</span>)<br>width=$(<span class="hljs-built_in">echo</span> <span class="hljs-variable">$rect</span> | awk <span class="hljs-string">&#x27;&#123;print $3&#125;&#x27;</span>)<br>height=$(<span class="hljs-built_in">echo</span> <span class="hljs-variable">$rect</span> | awk <span class="hljs-string">&#x27;&#123;print $4&#125;&#x27;</span>)<br><span class="hljs-built_in">echo</span> <span class="hljs-variable">$pos_x</span> <span class="hljs-variable">$pos_y</span> <span class="hljs-variable">$width</span> <span class="hljs-variable">$height</span><br><br>maim -g <span class="hljs-variable">$&#123;width&#125;</span>x<span class="hljs-variable">$&#123;height&#125;</span>+<span class="hljs-variable">$&#123;pos_x&#125;</span>+<span class="hljs-variable">$&#123;pos_y&#125;</span> <span class="hljs-variable">$tmp_file</span><br>gtk-launch viewnior <span class="hljs-variable">$tmp_file</span> --class=Viewnior &amp;&amp; <span class="hljs-built_in">sleep</span> 1 &amp;&amp; xdotool search --onlyvisible --classname <span class="hljs-string">&quot;Viewnior&quot;</span> windowsize <span class="hljs-variable">$width</span> <span class="hljs-variable">$height</span> windowmove <span class="hljs-variable">$pos_x</span> <span class="hljs-variable">$pos_y</span><br></code></pre></td></tr></table></figure>
+<p>移动贴图：Meta + 左键</p>
+<p>改变贴图大小：Meta + 右键拖动</p>
+<p>关闭贴图窗口：ctrl + w</p>
+<br>
+<h3 id="磁盘分区">磁盘分区</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S gparted<br></code></pre></td></tr></table></figure>
+<br>
+<h3 id="baidupcs-go">baidupcs-go</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -Qi baidupcs-go<br><span class="hljs-comment"># 用 bduss 登录, login -bduss=******</span><br><span class="hljs-comment"># bduss获取: 登录pan.baidu.com, 开发者工具 &gt; Application &gt; Cookie &gt; bduss</span><br></code></pre></td></tr></table></figure>
+<br>
+<h3 id="e-search-bin-flameshot-截图贴图">e-search-bin flameshot (截图贴图)</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S e-search-bin  <span class="hljs-comment"># 体积比较大</span><br>paru -S flameshot <br></code></pre></td></tr></table></figure>
+<br>
+<h3 id="mlocate-搜索文件">mlocate (搜索文件)</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S plocate<br></code></pre></td></tr></table></figure>
+<br>
+<h3 id="AB-Downloader">AB Downloader</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S jdk17-openjdk   <span class="hljs-comment"># 之前已经安装过 jdk-openjdk 的不用安装这个啦</span><br>archlinux-java <span class="hljs-built_in">set</span> java-17-openjdk<br>paru -S abdownloadmanager-bin<br></code></pre></td></tr></table></figure>
+<p>edge的相关插件到 <a target="_blank" rel="noopener" href="https://www.crxsoso.com/webstore/detail/bbobopahenonfdgjgaleledndnnfhooj">AB Download Manager Browser Integration</a> 下载</p>
+<p>缺点：（1）不能自定义 user agent （2）没有官方的edge插件 （3）不能自动嗅探网页上的多媒体资源 （4）托盘区图标点击无响应</p>
+<br>
+<h3 id="xdman-beta-bin">xdman-beta-bin</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S xdman-beta-bin<br></code></pre></td></tr></table></figure>
+<br>
+<h3 id="cloudpan189-go-bin-天翼云盘-提示权限问题">cloudpan189-go-bin (天翼云盘,提示权限问题)</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S cloudpan189-go-bin<br></code></pre></td></tr></table></figure>
+<br>
+<h3 id="lx-music-desktop-bin">lx-music-desktop-bin</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S lx-music-desktop-bin<br></code></pre></td></tr></table></figure>
+<p>根据 <a target="_blank" rel="noopener" href="https://github.com/lyswhut/lx-music-desktop/issues/1114">github上的一个issue</a> 说会有内存泄漏问题，但是我按照上面操作后并没有多大影响，感觉最新版应该解决了内存泄漏问题，操作如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 关闭软件(不关闭桌面歌词) </span><br>paru -S strace  <span class="hljs-comment"># 追查系统调用</span><br>strace lx-music-desktop<br><span class="hljs-comment"># 疯狂输出</span><br>writev(45, [&#123;iov_base=<span class="hljs-string">&quot;\f\0\5\0\17\0\300\10\3\0\0\0\306\5\0\0\364\2\0\0&quot;</span>, iov_len=20&#125;], 1) = 20<br>recvmsg(46, &#123;msg_namelen=0&#125;, 0)         = -1 EAGAIN (资源暂时不可用)<br>recvmsg(46, &#123;msg_namelen=0&#125;, 0)         = -1 EAGAIN (资源暂时不可用)<br>poll([&#123;fd=11, events=POLLIN&#125;, &#123;fd=45, events=POLLIN&#125;, &#123;fd=46, events=POLLIN&#125;], 3, 0) = 1 ([&#123;fd=45, revents=POLLIN&#125;])<br>poll([&#123;fd=45, events=POLLIN|POLLOUT&#125;], 1, -1^C) = 1 ([&#123;fd=45, revents=POLLIN|POLLOUT&#125;])<br><br><br>grep messagebus /etc/group<br><span class="hljs-built_in">sudo</span> groupadd messagebus<br><span class="hljs-built_in">sudo</span> usermod -a -G messagebus joelee<br><br><span class="hljs-comment"># 撤销</span><br><span class="hljs-built_in">sudo</span> gpasswd -d joelee messagebus<br><span class="hljs-built_in">sudo</span> groupdel messagebus<br></code></pre></td></tr></table></figure>
+<br>
+<h3 id="easyconnect"><a target="_blank" rel="noopener" href="https://aur.archlinux.org/packages/easyconnect">easyconnect</a></h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S easyconnect<br></code></pre></td></tr></table></figure>
+<br>
+<h3 id="tlp">tlp</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S tlp tlpui tlp-rdw<br><span class="hljs-comment"># tlpui: A GTK user interface for TLP written in Python</span><br><span class="hljs-comment"># tlp-rdw: 配置无线设备（如Wi-Fi、蓝牙等）的工具</span><br><br><br><span class="hljs-built_in">sudo</span> systemctl <span class="hljs-built_in">enable</span> --now tlp.service<br><span class="hljs-comment"># /etc/tlp.conf</span><br>USB_AUTOSUSPEND=0<br>RUNTIME_PM_ON_AC=auto<br><br><br><span class="hljs-comment"># avoid conflicts and ensure proper operation of TLP&#x27;s radio device switching options</span><br><span class="hljs-comment"># 让 TLP 能够单独负责无线设备的节能管理</span><br><span class="hljs-built_in">sudo</span> systemctl mask systemd-rfkill.service<br><span class="hljs-built_in">sudo</span> systemctl mask systemd-rfkill.socket<br></code></pre></td></tr></table></figure>
+<br>
+<h3 id="Vega-Mobile系列集显">Vega Mobile系列集显</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S mesa xf86-video-amdgpu<br>paru -S vulkan-radeon<br></code></pre></td></tr></table></figure>
 <h2 id="常见问题">常见问题</h2>
 <h3 id="breeze主题锁屏后黑屏">breeze主题锁屏后黑屏</h3>
 <p>更换主题，安装 breath 主题</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">paru -S breath-theme-git<br></code></pre></td></tr></table></figure>
-<p><br></p>
+<br>
 
                 
               </div>
@@ -506,6 +567,12 @@ target="_blank" rel="noopener" href="https://trackerslist.com/#/">XIU2/TrackersL
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2024/11/30/LearnTex/" title="LearnTex">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">LearnTex</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
